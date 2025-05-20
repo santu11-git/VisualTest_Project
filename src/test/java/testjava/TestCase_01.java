@@ -22,7 +22,11 @@ public class TestCase_01 {
         String reply = gpt.getChatCompletion("Write a username validation test cases ");
         System.out.println("gpt-4o-mini:\n" + reply);
     }
+	@Test
 	
+	public void GPTResponse2() {
+		
+	}
 	@Test
 
 	public void validateLoginPageVisuals() throws InterruptedException {
