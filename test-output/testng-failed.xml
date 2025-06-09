@@ -5,7 +5,7 @@
     <classes>
       <class name="testjava.TestCase_01">
         <methods>
-          <include name="validateLoginPageVisuals"/>
+          <include name="VisualTestRunner"/>
         </methods>
       </class> <!-- testjava.TestCase_01 -->
     </classes>
