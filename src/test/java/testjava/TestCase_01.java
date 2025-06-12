@@ -1,6 +1,8 @@
 package testjava;
 
 import java.io.File;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -13,11 +15,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
+import VisualTest.VisualTest.A11YUtil;
 import VisualTest.VisualTest.ActualScreenshot;
 import VisualTest.VisualTest.ChatGPTClient;
 import VisualTest.VisualTest.FullPageRobotScreenshotUtil;
 import VisualTest.VisualTest.FullPageScreenshotUtil;
+import VisualTest.VisualTest.GenAIA11YReportGenerator;
+import VisualTest.VisualTest.HybridA11YVisionConnector;
 import VisualTest.VisualTest.ImageComparisonUtil;
+import VisualTest.VisualTest.ImageMultipleComparisonUtil;
+import VisualTest.VisualTest.VisionAIUtil;
 import VisualTest.VisualTest.VisualAnomalyDetector;
 import VisualTest.VisualTest.VisualTesting10_ElementwiseSS;
 
@@ -26,7 +33,7 @@ public class TestCase_01 {
 	@Test 
 	public void GPTResponse() {
         ChatGPTClient gpt = new ChatGPTClient();
-        String reply = gpt.getChatCompletion("Write a username validation test cases ");
+        String reply = gpt.getChatCompletion("Write a test scenario for user login with valid credentials.");
         System.out.println("gpt-4o-mini:\n" + reply);
     }
 	
@@ -59,24 +66,54 @@ public class TestCase_01 {
 		driver.quit();
 	}
 	
+	// This is for Baseline SS capture - Single SS (Not for Multiple Page in one Cycle):
 	@Test 
 	public void takeFullPageBaselineScreenshotBaseline() throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://sauce-demo.myshopify.com/");
 		driver.manage().window().maximize();
-		FullPageScreenshotUtil.captureFullPageScreenshotBaseline(driver, "baselineScreenshots");
+		// For Single Page:
+		/*FullPageScreenshotUtil.captureFullPageScreenshotBaselineforMultiImage(driver, "baselineScreenshots");
 		driver.quit();
+        */
+		//For Multiple Page:
+		
+		List<String> pages = Arrays.asList("page_01", "page_02");
+		// Page 1
+		FullPageScreenshotUtil.captureMultipleScreenshotsBaseline(pages, driver, "Page_1");
+
+		// Page 2
+		driver.findElement(By.xpath("(//a[text()='Search'])[1]")).click();// navigate to next page
+		Thread.sleep(3000);
+		FullPageScreenshotUtil.captureMultipleScreenshotsBaseline(pages, driver, "Page_2");
+
+		driver.quit();
+
 	}
 	
+	// This is for Actual SS capture - Single SS (Not for Multiple Page in one Cycle):
 	@Test 
 	public void takeFullPageBaselineScreenshotActual() throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://sauce-demo.myshopify.com/");
 		driver.manage().window().maximize();
-		ActualScreenshot.captureFullPageScreenshotActual(driver, "baselineScreenshots");
-		driver.quit();
+		// For Single Screenshots
+		/*
+		 * ActualScreenshot.captureFullPageScreenshotActual(driver,
+		 * "baselineScreenshots"); driver.quit();
+		 */
+		List<String> pages = Arrays.asList("page_01", "page_02");
+		
+		//Page-1
+		// For Multiple Page:
+		ActualScreenshot.captureMultipleScreenshotsActual(pages, driver, "page_01");
+		// Page 2
+				driver.findElement(By.xpath("(//a[text()='Search'])[1]")).click();// navigate to next page
+				Thread.sleep(3000);
+				ActualScreenshot.captureMultipleScreenshotsActual(pages, driver, "page_02");
 	}
 	
+	// This is not applicable: 
 	@Test
 	public void FullPageRobotScreenshot() throws Exception {
 		WebDriver driver = new ChromeDriver();
@@ -86,18 +123,45 @@ public class TestCase_01 {
 		driver.quit();
 	}
 	
+	// This is for Comparison (Baseline vs Actual) - Single SS (Not for Multiple Page in one Cycle):
 	@Test
 	public void VisualTestRunner() throws Exception {
 		
 		 boolean result = ImageComparisonUtil.compareLatestBaselineAndActual();
 
 	        if (result) {
-	            System.out.println("🎯 Visual Test Passed!");
+	            System.out.println("Visual Test Passed!");
 	        } else {
-	            System.out.println("🛑 Visual Test Failed: Differences found.");
+	            System.out.println("Visual Test Failed: Differences found.");
 	        }
 	    
 	}
+	
+	// This is for Comparison (Baseline vs Actual) - Multiple SS (Not for single SS):
+	@Test
+	public void VisualTestRunnerMultipleImage() throws Exception {
+	 ImageMultipleComparisonUtil.compareAllMatchingImages();
+	}
+	
+	
+	@Test 
+	public void A11YTesting() throws Exception {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://tutorialsninja.com/demo/");
+		Thread.sleep(1000);
+		driver.manage().window().maximize();
+		A11YUtil.analyzePageAccessibility(driver, "output");
+		// Google Vision AI part - need billing to continue. 
+		HybridA11YVisionConnector.processA11YScreenshotsWithVisionAI("output");
+	
+		
+		// Assume your A11YUtil is already generating timestamp & folderPath
+		
+		Thread.sleep(3000);
+		driver.quit();
+	}
+	
 	
 }
 
