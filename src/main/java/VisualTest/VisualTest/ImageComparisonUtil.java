@@ -86,7 +86,7 @@ public class ImageComparisonUtil {
         }
     }
     
-    // ✅ New: Compare all matching baseline and actual images by file name (Page_1.png etc.)
+    // ✅ New: Compare all matching baseline and actual images by file name (This is for batch page processing not for single page)
     public static boolean compareAllScreenshotsByName() {
         boolean allMatched = true;
         try {

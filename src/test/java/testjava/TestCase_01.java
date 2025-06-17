@@ -19,15 +19,20 @@ import VisualTest.VisualTest.A11YUtil;
 import VisualTest.VisualTest.ActualScreenshot;
 import VisualTest.VisualTest.ChatGPTClient;
 import VisualTest.VisualTest.FullPageRobotScreenshotUtil;
-import VisualTest.VisualTest.FullPageScreenshotUtil;
+import VisualTest.VisualTest.FullPageScreenshotActualUtil;
+import VisualTest.VisualTest.FullPageScreenshotBaselineUtil;
 import VisualTest.VisualTest.GenAIA11YReportGenerator;
 import VisualTest.VisualTest.HybridA11YVisionConnector;
+import VisualTest.VisualTest.ImageComparisonUpdatedUtil;
 import VisualTest.VisualTest.ImageComparisonUtil;
 import VisualTest.VisualTest.ImageMultipleComparisonUtil;
 import VisualTest.VisualTest.VisionAIUtil;
 import VisualTest.VisualTest.VisualAnomalyDetector;
+import VisualTest.VisualTest.VisualComparisonBatchUtil;
 import VisualTest.VisualTest.VisualTesting10_ElementwiseSS;
-
+import dev.failsafe.internal.util.Assert;
+import org.testng.asserts.*;
+import org.testng.*;
 
 public class TestCase_01 {
 	@Test 
@@ -35,6 +40,7 @@ public class TestCase_01 {
         ChatGPTClient gpt = new ChatGPTClient();
         String reply = gpt.getChatCompletion("Write a test scenario for user login with valid credentials.");
         System.out.println("gpt-4o-mini:\n" + reply);
+        System.out.println();
     }
 	
 	@Test
@@ -73,20 +79,7 @@ public class TestCase_01 {
 		driver.get("https://sauce-demo.myshopify.com/");
 		driver.manage().window().maximize();
 		// For Single Page:
-		/*FullPageScreenshotUtil.captureFullPageScreenshotBaselineforMultiImage(driver, "baselineScreenshots");
-		driver.quit();
-        */
-		//For Multiple Page:
-		
-		List<String> pages = Arrays.asList("page_01", "page_02");
-		// Page 1
-		FullPageScreenshotUtil.captureMultipleScreenshotsBaseline(pages, driver, "Page_1");
-
-		// Page 2
-		driver.findElement(By.xpath("(//a[text()='Search'])[1]")).click();// navigate to next page
-		Thread.sleep(3000);
-		FullPageScreenshotUtil.captureMultipleScreenshotsBaseline(pages, driver, "Page_2");
-
+		FullPageScreenshotBaselineUtil.captureFullPageScreenshotBaseline(driver, "baselineScreenshots");
 		driver.quit();
 
 	}
@@ -98,19 +91,9 @@ public class TestCase_01 {
 		driver.get("https://sauce-demo.myshopify.com/");
 		driver.manage().window().maximize();
 		// For Single Screenshots
-		/*
-		 * ActualScreenshot.captureFullPageScreenshotActual(driver,
-		 * "baselineScreenshots"); driver.quit();
-		 */
-		List<String> pages = Arrays.asList("page_01", "page_02");
 		
-		//Page-1
-		// For Multiple Page:
-		ActualScreenshot.captureMultipleScreenshotsActual(pages, driver, "page_01");
-		// Page 2
-				driver.findElement(By.xpath("(//a[text()='Search'])[1]")).click();// navigate to next page
-				Thread.sleep(3000);
-				ActualScreenshot.captureMultipleScreenshotsActual(pages, driver, "page_02");
+		 ActualScreenshot.captureFullPageScreenshotActual(driver, "actualScreenshots"); 
+		 driver.quit();
 	}
 	
 	// This is not applicable: 
@@ -123,7 +106,7 @@ public class TestCase_01 {
 		driver.quit();
 	}
 	
-	// This is for Comparison (Baseline vs Actual) - Single SS (Not for Multiple Page in one Cycle):
+	// This is for Comparison (Baseline vs Actual) - Single SS (Not for Multiple Page in one Cycle): old one
 	@Test
 	public void VisualTestRunner() throws Exception {
 		
@@ -136,30 +119,22 @@ public class TestCase_01 {
 	        }
 	    
 	}
+
 	
-	// This is for Comparison (Baseline vs Actual) - Multiple SS (Not for single SS):
+	// This is the final Baseline vs Actual comparison Test Case: New One
 	@Test
-	public void VisualTestRunnerMultipleImage() throws Exception {
-	 ImageMultipleComparisonUtil.compareAllMatchingImages();
-	}
-	
-	
-	@Test 
-	public void A11YTesting() throws Exception {
+	public void VisualTestRunnerUpdated () throws Exception {
 		
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://tutorialsninja.com/demo/");
-		Thread.sleep(1000);
-		driver.manage().window().maximize();
-		A11YUtil.analyzePageAccessibility(driver, "output");
-		// Google Vision AI part - need billing to continue. 
-		HybridA11YVisionConnector.processA11YScreenshotsWithVisionAI("output");
-	
-		
-		// Assume your A11YUtil is already generating timestamp & folderPath
-		
-		Thread.sleep(3000);
-		driver.quit();
+		boolean comparisonResult = ImageComparisonUpdatedUtil.compareLatestBaselineAndActual();
+
+        if (comparisonResult==true) {
+            System.out.println("✅ Visual Test Passed: Images are visually similar.");
+         } 
+        else {
+            System.out.println("❌ Visual Test Failed: Differences found.");
+            // Fail the test in TestNG if any difference found
+         }
+	    
 	}
 	
 	

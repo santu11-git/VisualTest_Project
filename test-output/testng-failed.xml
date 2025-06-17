@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testjava.TestCase_01">
+      <class name="testjava.TestCase_02">
         <methods>
-          <include name="VisualTestRunner"/>
+          <include name="VisualTestRunnerMultipleImage1"/>
         </methods>
-      </class> <!-- testjava.TestCase_01 -->
+      </class> <!-- testjava.TestCase_02 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
