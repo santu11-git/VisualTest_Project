@@ -11,16 +11,16 @@ public class GenAIA11YReportGenerator {
 
     public static void generateVisionAIReport() {
         try {
-            // Locate latest output folder automatically
-            File outputDir = new File("output");
+            // Use consistent output path under Maven structure
+            File outputDir = new File("src/main/resources/output");
             File[] folders = outputDir.listFiles(File::isDirectory);
 
             if (folders == null || folders.length == 0) {
-                System.out.println("⚠ No Vision AI folders found.");
+                System.out.println("⚠ No Vision AI folders found in: " + outputDir.getAbsolutePath());
                 return;
             }
 
-            // Find latest folder based on lastModified
+            // Find the most recently modified folder
             File latestFolder = folders[0];
             for (File folder : folders) {
                 if (folder.lastModified() > latestFolder.lastModified()) {
@@ -30,45 +30,54 @@ public class GenAIA11YReportGenerator {
 
             String folderPath = latestFolder.getAbsolutePath();
 
-            // Create Excel report
+            // Create Excel workbook
             Workbook workbook = new XSSFWorkbook();
             Sheet sheet = workbook.createSheet("Vision AI Report");
 
-            // Header row
+            // Create header
             Row header = sheet.createRow(0);
             header.createCell(0).setCellValue("Violation ID");
             header.createCell(1).setCellValue("Extracted Text");
 
-            // Read all JSON files inside the folder
-            File[] files = latestFolder.listFiles((dir, name) -> name.endsWith(".json"));
-            if (files == null || files.length == 0) {
-                System.out.println("⚠ No Vision AI JSON files found inside folder.");
+            // Read all relevant JSON files inside latest folder
+            File[] jsonFiles = latestFolder.listFiles((dir, name) -> name.endsWith(".json"));
+            if (jsonFiles == null || jsonFiles.length == 0) {
+                System.out.println("⚠ No Vision AI JSON files found inside: " + folderPath);
                 return;
             }
 
             int rowIndex = 1;
-            for (File jsonFile : files) {
-                // Skip Axe-Core JSON (we only need Vision AI JSONs here)
-                if (jsonFile.getName().startsWith("A11Y_Violations_")) {
+            for (File jsonFile : jsonFiles) {
+                // Skip axe-core JSONs
+                if (jsonFile.getName().startsWith("A11Y_Violation_Report")) continue;
+
+                String content = Files.readString(jsonFile.toPath()).trim();
+
+                // Validate JSON
+                if (content.isEmpty() || !content.startsWith("{")) {
+                    System.out.println("⚠ Skipping invalid JSON: " + jsonFile.getName());
                     continue;
                 }
 
-                String content = new String(Files.readAllBytes(jsonFile.toPath()));
-                JSONObject visionJson = new JSONObject(content);
-                String extractedText = visionJson.optString("ExtractedText", "");
+                try {
+                    JSONObject visionJson = new JSONObject(content);
+                    String extractedText = visionJson.optString("ExtractedText", "");
+                    String violationId = jsonFile.getName().replace(".json", "");
 
-                String violationId = jsonFile.getName().replace(".json", "");
+                    Row row = sheet.createRow(rowIndex++);
+                    row.createCell(0).setCellValue(violationId);
+                    row.createCell(1).setCellValue(extractedText);
 
-                Row row = sheet.createRow(rowIndex++);
-                row.createCell(0).setCellValue(violationId);
-                row.createCell(1).setCellValue(extractedText);
+                } catch (Exception e) {
+                    System.out.println("⚠ Failed to parse JSON in " + jsonFile.getName() + ": " + e.getMessage());
+                }
             }
 
-            // Auto-size columns
+            // Resize columns
             sheet.autoSizeColumn(0);
             sheet.autoSizeColumn(1);
 
-            // Save Excel
+            // Save Excel to: src/main/resources/output/.../VisionAI_Report.xlsx
             String excelPath = folderPath + File.separator + "VisionAI_Report.xlsx";
             try (FileOutputStream out = new FileOutputStream(excelPath)) {
                 workbook.write(out);

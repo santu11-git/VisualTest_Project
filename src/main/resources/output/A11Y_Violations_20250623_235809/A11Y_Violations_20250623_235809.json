@@ -1,0 +1,20 @@
+[
+  {
+    "ViolationID": "aria-allowed-role",
+    "Impact": "minor",
+    "Description": "Ensures role attribute has an appropriate value for the element",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-allowed-role?application\u003daxeAPI",
+    "Selectors": [
+      ".justify-content-start"
+    ]
+  },
+  {
+    "ViolationID": "region",
+    "Impact": "moderate",
+    "Description": "Ensures all page content is contained by landmarks",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  }
+]

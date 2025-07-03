@@ -24,46 +24,44 @@ public class FullPageScreenshotBaselineUtil {
     public static void captureFullPageScreenshotBaseline(WebDriver driver, String folderName) throws Exception {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");
+        // Get full page and viewport height
+        Long scrollHeight = (Long) js.executeScript("return document.body.scrollHeight");
         Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
 
         List<BufferedImage> capturedImages = new ArrayList<>();
         int yOffset = 0;
-        int scrollBuffer = 100; // Overlap buffer to reduce stitching artifacts
+        int scrollBuffer = 50; // Overlap buffer to reduce stitching glitches
 
-        while (yOffset < totalHeight) {
-            // 🟡 Smooth scroll with slight overlap
-            js.executeScript("window.scrollTo(0, arguments[0])", yOffset);
-            Thread.sleep(1000); // Allow rendering and scroll sync
-
-            // 🟡 Optional: wait for DOM to stabilize/lazy load
-            js.executeScript("return new Promise(resolve => setTimeout(resolve, 300));");
+        // Capture screenshots by scrolling down in steps
+        while (yOffset < scrollHeight) {
+            js.executeScript("window.scrollTo(0, arguments[0]);", yOffset);
+            Thread.sleep(800); // Allow page to render fully
 
             Screenshot screenshot = new AShot().takeScreenshot(driver);
-            capturedImages.add(screenshot.getImage());
+            BufferedImage image = screenshot.getImage();
+            capturedImages.add(image);
 
-            yOffset += viewportHeight - scrollBuffer;
+            int actualCapturedHeight = image.getHeight();
+            yOffset += (actualCapturedHeight - scrollBuffer);
         }
 
-        // ✅ Combine captured images vertically
-        int fullImageWidth = capturedImages.get(0).getWidth();
-        int fullImageHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
+        // Stitch all captured images vertically
+        int finalWidth = capturedImages.get(0).getWidth();
+        int finalHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
 
-        BufferedImage finalImage = new BufferedImage(fullImageWidth, fullImageHeight, BufferedImage.TYPE_INT_RGB);
+        BufferedImage finalImage = new BufferedImage(finalWidth, finalHeight, BufferedImage.TYPE_INT_RGB);
         Graphics graphics = finalImage.getGraphics();
+
         int currentHeight = 0;
-
-        for (BufferedImage image : capturedImages) {
-            graphics.drawImage(image, 0, currentHeight, null);
-            currentHeight += image.getHeight();
+        for (BufferedImage img : capturedImages) {
+            graphics.drawImage(img, 0, currentHeight, null);
+            currentHeight += img.getHeight();
         }
+        graphics.dispose(); // Clean up
 
-        graphics.dispose(); // 🧹 good practice
-
-        // ✅ Save stitched screenshot with timestamp
+        // Save stitched image with timestamp
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String folderPath = "src/main/resources/BaselineSS";
-
         File folder = new File(folderPath);
         if (!folder.exists()) folder.mkdirs();
 
@@ -74,15 +72,9 @@ public class FullPageScreenshotBaselineUtil {
     }
 
 
-    public static WebDriver getChromeDriver() {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        return driver;
-    }
-    
+
     // For Multiple Screenshots:
     
- // Single page capture (QA will only call this)
     public static void captureScreenshotForMultipleCurrentPageBaseline(WebDriver driver, String mode, String pageName) throws Exception {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");

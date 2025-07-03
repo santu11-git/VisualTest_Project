@@ -1,0 +1,74 @@
+[
+  {
+    "ViolationID": "color-contrast",
+    "Impact": "serious",
+    "Description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI",
+    "Selectors": [
+      ".et_pb_custom_button_icon"
+    ]
+  },
+  {
+    "ViolationID": "duplicate-id",
+    "Impact": "minor",
+    "Description": "Ensures every id attribute value is unique",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application\u003daxeAPI",
+    "Selectors": [
+      "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom"
+    ]
+  },
+  {
+    "ViolationID": "heading-order",
+    "Impact": "moderate",
+    "Description": "Ensures the order of headings is semantically correct",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application\u003daxeAPI",
+    "Selectors": [
+      "h3"
+    ]
+  },
+  {
+    "ViolationID": "label-title-only",
+    "Impact": "serious",
+    "Description": "Ensures that every form element is not solely labeled using the title or aria-describedby attributes",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/label-title-only?application\u003daxeAPI",
+    "Selectors": [
+      "input"
+    ]
+  },
+  {
+    "ViolationID": "landmark-one-main",
+    "Impact": "moderate",
+    "Description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "link-name",
+    "Impact": "serious",
+    "Description": "Ensures links have discernible text",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI",
+    "Selectors": [
+      ".et-social-facebook \u003e .icon"
+    ]
+  },
+  {
+    "ViolationID": "meta-viewport",
+    "Impact": "critical",
+    "Description": "Ensures \u003cmeta name\u003d\"viewport\"\u003e does not disable text scaling and zooming",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application\u003daxeAPI",
+    "Selectors": [
+      "meta[name\u003d\"viewport\"]"
+    ]
+  },
+  {
+    "ViolationID": "region",
+    "Impact": "moderate",
+    "Description": "Ensures all page content is contained by landmarks",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  }
+]

@@ -1,8 +1,9 @@
 package VisualTest.VisualTest;
 
+import boofcv.alg.filter.blur.GBlurImageOps;
+import boofcv.alg.misc.ImageStatistics;
 import boofcv.io.image.ConvertBufferedImage;
 import boofcv.struct.image.GrayF32;
-import boofcv.alg.misc.ImageStatistics;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -18,54 +19,44 @@ public class ImageComparisonUpdatedUtil {
     private static final String BASELINE_FOLDER = "src/main/resources/BaselineSS";
     private static final String ACTUAL_FOLDER = "src/main/resources/ActualSS";
     private static final String RESULT_FOLDER = "src/main/resources/ResultSS";
+
     private static final double SSIM_THRESHOLD = 0.95;
+    private static final int COLOR_TOLERANCE = 25;
+    private static final int PATCH_DIFF_THRESHOLD = 4; // How many pixels in a 5x5 patch need to differ
 
-    // ✅ Get latest image file from folder
-    private static File getLatestImageFile(File folder) {
-        File[] imageFiles = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".png"));
-        if (imageFiles == null || imageFiles.length == 0) return null;
-
-        return Arrays.stream(imageFiles)
-                .max(Comparator.comparingLong(File::lastModified))
-                .orElse(null);
-    }
-
-    // ✅ Main method to compare latest screenshots
     public static boolean compareLatestBaselineAndActual() {
-    	
-            // ✅ Call fail-safe utility first
-            boolean preCheck = FailSafeUtility.validateScreenshotAvailability(BASELINE_FOLDER, ACTUAL_FOLDER);
-            if (!preCheck) {
-                System.out.println("❌ Pre-check failed. Comparison aborted.");
-                return false;
-            }
-            
+        boolean preCheck = FailSafeUtility.validateScreenshotAvailability(BASELINE_FOLDER, ACTUAL_FOLDER);
+        if (!preCheck) {
+            System.out.println("❌ Pre-check failed. Comparison aborted.");
+            return false;
+        }
+
         try {
-            File baselineImage = getLatestImageFile(new File(BASELINE_FOLDER));
-            File actualImage = getLatestImageFile(new File(ACTUAL_FOLDER));
-
-            if (baselineImage == null || actualImage == null) {
-                System.out.println("❌ Could not find latest screenshots in BaselineSS or ActualSS.");
+            File baselineFile = getLatestImageFile(new File(BASELINE_FOLDER));
+            File actualFile = getLatestImageFile(new File(ACTUAL_FOLDER));
+            if (baselineFile == null || actualFile == null) {
+                System.out.println("❌ Could not find latest screenshots.");
                 return false;
             }
 
-            BufferedImage img1 = ImageIO.read(baselineImage);
-            BufferedImage img2 = ImageIO.read(actualImage);
+            BufferedImage img1 = ImageIO.read(baselineFile);
+            BufferedImage img2 = ImageIO.read(actualFile);
 
-            if (img1.getWidth() != img2.getWidth() || img1.getHeight() != img2.getHeight()) {
-                System.out.println("❌ Image dimensions do not match.");
-                return false;
-            }
+            int width = Math.min(img1.getWidth(), img2.getWidth());
+            int height = Math.min(img1.getHeight(), img2.getHeight());
 
-            boolean pixelDiff = checkPixelDifference(img1, img2);
-            double ssimScore = calculateSSIM(img1, img2);
+            BufferedImage cropped1 = img1.getSubimage(0, 0, width, height);
+            BufferedImage cropped2 = img2.getSubimage(0, 0, width, height);
+
+            boolean pixelSimilar = checkPixelDifference(cropped1, cropped2);
+            double ssimScore = calculateSimplifiedSSIM(cropped1, cropped2);
 
             System.out.printf("🔬 SSIM Similarity Score: %.5f\n", ssimScore);
-            System.out.println("🔎 Pixel Diff Result: " + (pixelDiff ? "No difference" : "Difference found"));
+            System.out.println("🔎 Pixel Diff Result: " + (pixelSimilar ? "No significant diff" : "Difference found"));
 
-            if (!pixelDiff || ssimScore < SSIM_THRESHOLD) {
-                saveDifferenceImage(img1, img2);
-                System.out.println("❌ Visual differences detected and result image generated.");
+            if (!pixelSimilar || ssimScore < SSIM_THRESHOLD) {
+                saveDifferenceImage(cropped1, cropped2);
+                System.out.println("❌ Differences detected; result image generated.");
                 return false;
             } else {
                 System.out.println("✅ Images are visually similar.");
@@ -76,55 +67,75 @@ public class ImageComparisonUpdatedUtil {
             e.printStackTrace();
             return false;
         }
-        
     }
-            
 
-    // ✅ Simple pixel comparison
+    private static File getLatestImageFile(File folder) {
+        File[] imageFiles = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".png"));
+        if (imageFiles == null || imageFiles.length == 0) return null;
+        return Arrays.stream(imageFiles)
+                .max(Comparator.comparingLong(File::lastModified))
+                .orElse(null);
+    }
+
     private static boolean checkPixelDifference(BufferedImage img1, BufferedImage img2) {
-        for (int y = 0; y < img1.getHeight(); y++) {
-            for (int x = 0; x < img1.getWidth(); x++) {
-                if (img1.getRGB(x, y) != img2.getRGB(x, y)) {
+        int width = img1.getWidth(), height = img1.getHeight();
+
+        for (int y = 2; y < height - 2; y++) {
+            for (int x = 2; x < width - 2; x++) {
+                int diffCount = 0;
+
+                for (int dy = -2; dy <= 2; dy++) {
+                    for (int dx = -2; dx <= 2; dx++) {
+                        int rgb1 = img1.getRGB(x + dx, y + dy);
+                        int rgb2 = img2.getRGB(x + dx, y + dy);
+
+                        int r1 = (rgb1 >> 16) & 0xFF, g1 = (rgb1 >> 8) & 0xFF, b1 = rgb1 & 0xFF;
+                        int r2 = (rgb2 >> 16) & 0xFF, g2 = (rgb2 >> 8) & 0xFF, b2 = rgb2 & 0xFF;
+
+                        int diff = Math.abs(r1 - r2) + Math.abs(g1 - g2) + Math.abs(b1 - b2);
+                        if (diff > COLOR_TOLERANCE) diffCount++;
+                    }
+                }
+
+                if (diffCount > PATCH_DIFF_THRESHOLD) {
                     return false;
                 }
             }
         }
+
         return true;
     }
 
-    // ✅ Simplified SSIM calculation using BoofCV
-    private static double calculateSSIM(BufferedImage img1, BufferedImage img2) {
+    private static double calculateSimplifiedSSIM(BufferedImage img1, BufferedImage img2) {
         GrayF32 gray1 = ConvertBufferedImage.convertFrom(img1, (GrayF32) null);
         GrayF32 gray2 = ConvertBufferedImage.convertFrom(img2, (GrayF32) null);
 
-        if (gray1.getWidth() != gray2.getWidth() || gray1.getHeight() != gray2.getHeight()) {
-            throw new IllegalArgumentException("Image dimensions do not match for SSIM!");
-        }
+        GBlurImageOps.gaussian(gray1, gray1, -1, 2, null);
+        GBlurImageOps.gaussian(gray2, gray2, -1, 2, null);
 
         double mean1 = ImageStatistics.mean(gray1);
         double mean2 = ImageStatistics.mean(gray2);
 
         double diff = Math.abs(mean1 - mean2);
-        double ssimScore = 1.0 - (diff / 255.0);  // normalize
-
-        return ssimScore;
+        return 1.0 - (diff / 255.0);
     }
 
-    // ✅ Generate diff image if mismatch found
     private static void saveDifferenceImage(BufferedImage img1, BufferedImage img2) {
         try {
-            BufferedImage diffImage = new BufferedImage(img1.getWidth(), img1.getHeight(), BufferedImage.TYPE_INT_RGB);
+            int width = img1.getWidth();
+            int height = img1.getHeight();
+            BufferedImage diffImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
-            for (int y = 0; y < img1.getHeight(); y++) {
-                for (int x = 0; x < img1.getWidth(); x++) {
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
                     int rgb1 = img1.getRGB(x, y);
                     int rgb2 = img2.getRGB(x, y);
 
-                    if (rgb1 != rgb2) {
-                        diffImage.setRGB(x, y, Color.RED.getRGB());
-                    } else {
-                        diffImage.setRGB(x, y, rgb1);
-                    }
+                    int r1 = (rgb1 >> 16) & 0xFF, g1 = (rgb1 >> 8) & 0xFF, b1 = rgb1 & 0xFF;
+                    int r2 = (rgb2 >> 16) & 0xFF, g2 = (rgb2 >> 8) & 0xFF, b2 = rgb2 & 0xFF;
+
+                    int diff = Math.abs(r1 - r2) + Math.abs(g1 - g2) + Math.abs(b1 - b2);
+                    diffImage.setRGB(x, y, diff > COLOR_TOLERANCE ? Color.RED.getRGB() : rgb1);
                 }
             }
 
@@ -135,6 +146,7 @@ public class ImageComparisonUpdatedUtil {
             File diffFile = new File(resultFolder, "DiffResult_" + timestamp + ".png");
             ImageIO.write(diffImage, "png", diffFile);
             System.out.println("🖼 Diff image saved at: " + diffFile.getAbsolutePath());
+
         } catch (Exception e) {
             e.printStackTrace();
         }

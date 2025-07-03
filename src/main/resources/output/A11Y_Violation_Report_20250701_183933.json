@@ -1,0 +1,1530 @@
+{
+  "generated_at": "20250701_183933",
+  "violations": [
+    {
+      "help": "Elements must have sufficient color contrast",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #f04a23, font size: 13.5pt, font weight: bold). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003cinput id\u003d\"btnSubmit\" name\u003d\"button\" type\u003d\"submit\" value\u003d\"Request More Info\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 3.67,
+                "fgColor": "#ffffff",
+                "bgColor": "#f04a23",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "13.5pt",
+                "fontWeight": "bold"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003cinput id\u003d\"btnSubmit\" name\u003d\"button\" type\u003d\"submit\" value\u003d\"Request More Info\"\u003e",
+                  "target": [
+                    "#btnSubmit"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 3.67 (foreground color: #ffffff, background color: #f04a23, font size: 13.5pt, font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            "#btnSubmit"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.5 (foreground color: #ffffff, background color: #fc4513, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_0 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eRequest More Info\u003c/a\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 3.5,
+                "fgColor": "#ffffff",
+                "bgColor": "#fc4513",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "15.0pt",
+                "fontWeight": "normal"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_0 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eRequest More Info\u003c/a\u003e",
+                  "target": [
+                    ".et_pb_button_0"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 3.5 (foreground color: #ffffff, background color: #fc4513, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            ".et_pb_button_0"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #039be5, font size: 16.5pt, font weight: normal). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003ch2\u003e” We have been a customer of Soffront for ten years. Year after year, Soffront meets our ever-changing needs by providing time-saving and business enhancing features. “\u003c/h2\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 3.07,
+                "fgColor": "#ffffff",
+                "bgColor": "#039be5",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "16.5pt",
+                "fontWeight": "normal"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003cdiv class\u003d\"et_pb_section et_pb_section_2 et_pb_with_background et_section_regular\"\u003e",
+                  "target": [
+                    ".et_pb_section_2"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #039be5, font size: 16.5pt, font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            ".et_pb_text_3 \u003e .et_pb_text_inner \u003e h2"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #039be5, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003cstrong\u003eAndre Fidellow, VP, HealthTec Software, Inc\u003c/strong\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 3.07,
+                "fgColor": "#ffffff",
+                "bgColor": "#039be5",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "12.0pt",
+                "fontWeight": "bold"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003cdiv class\u003d\"et_pb_section et_pb_section_2 et_pb_with_background et_section_regular\"\u003e",
+                  "target": [
+                    ".et_pb_section_2"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 3.07 (foreground color: #ffffff, background color: #039be5, font size: 12.0pt, font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            "p \u003e strong"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.5 (foreground color: #ffffff, background color: #fc4513, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_1 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eSchedule a Demo\u003c/a\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 3.5,
+                "fgColor": "#ffffff",
+                "bgColor": "#fc4513",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "15.0pt",
+                "fontWeight": "normal"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_1 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eSchedule a Demo\u003c/a\u003e",
+                  "target": [
+                    ".et_pb_button_1"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 3.5 (foreground color: #ffffff, background color: #fc4513, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            ".et_pb_button_1"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.5 (foreground color: #ffffff, background color: #fc4513, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_2 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eRequest More Info\u003c/a\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 3.5,
+                "fgColor": "#ffffff",
+                "bgColor": "#fc4513",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "15.0pt",
+                "fontWeight": "normal"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_2 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eRequest More Info\u003c/a\u003e",
+                  "target": [
+                    ".et_pb_button_2"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 3.5 (foreground color: #ffffff, background color: #fc4513, font size: 15.0pt, font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            ".et_pb_button_2"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.4 (foreground color: #666666, background color: #2d2d2d, font size: 10.5pt, font weight: normal). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003cdiv id\u003d\"footer-info\"\u003eCopyright 1992-2020, Soffront Corporation | \u003ca href\u003d\"https://soffront.com/terms/\"\u003eTerms\u003c/a\u003e | \u003ca href\u003d\"https://soffront.com/privacy-policy/\"\u003ePrivacy Policy\u003c/a\u003e\u003c/div\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 2.4,
+                "fgColor": "#666666",
+                "bgColor": "#2d2d2d",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "10.5pt",
+                "fontWeight": "normal"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003cdiv id\u003d\"footer-bottom\"\u003e",
+                  "target": [
+                    "#footer-bottom"
+                  ]
+                },
+                {
+                  "html": "\u003cfooter id\u003d\"main-footer\"\u003e",
+                  "target": [
+                    "#main-footer"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 2.4 (foreground color: #666666, background color: #2d2d2d, font size: 10.5pt, font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            "#footer-info"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.4 (foreground color: #666666, background color: #2d2d2d, font size: 10.5pt, font weight: bold). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003ca href\u003d\"https://soffront.com/terms/\"\u003eTerms\u003c/a\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 2.4,
+                "fgColor": "#666666",
+                "bgColor": "#2d2d2d",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "10.5pt",
+                "fontWeight": "bold"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003cdiv id\u003d\"footer-bottom\"\u003e",
+                  "target": [
+                    "#footer-bottom"
+                  ]
+                },
+                {
+                  "html": "\u003cfooter id\u003d\"main-footer\"\u003e",
+                  "target": [
+                    "#main-footer"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 2.4 (foreground color: #666666, background color: #2d2d2d, font size: 10.5pt, font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            "a[href$\u003d\"terms/\"]"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.4 (foreground color: #666666, background color: #2d2d2d, font size: 10.5pt, font weight: bold). Expected contrast ratio of 4.5:1",
+          "impact": "serious",
+          "html": "\u003ca href\u003d\"https://soffront.com/privacy-policy/\"\u003ePrivacy Policy\u003c/a\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": {
+                "contrastRatio": 2.4,
+                "fgColor": "#666666",
+                "bgColor": "#2d2d2d",
+                "expectedContrastRatio": "4.5:1",
+                "fontSize": "10.5pt",
+                "fontWeight": "bold"
+              },
+              "impact": "serious",
+              "relatedNodes": [
+                {
+                  "html": "\u003cdiv id\u003d\"footer-bottom\"\u003e",
+                  "target": [
+                    "#footer-bottom"
+                  ]
+                },
+                {
+                  "html": "\u003cfooter id\u003d\"main-footer\"\u003e",
+                  "target": [
+                    "#main-footer"
+                  ]
+                }
+              ],
+              "id": "color-contrast",
+              "message": "Element has insufficient color contrast of 2.4 (foreground color: #666666, background color: #2d2d2d, font size: 10.5pt, font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ],
+          "target": [
+            "#footer-info \u003e a:nth-child(2)"
+          ]
+        }
+      ],
+      "impact": "serious",
+      "description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI",
+      "id": "color-contrast",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143"
+      ]
+    },
+    {
+      "help": "id attribute value must be unique",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-67\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-67\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-67",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-67\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-67 et_first_mobile_item\"\u003e",
+                  "target": [
+                    ".et_first_mobile_item"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-2564\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2564\"\u003e\u003ca href\u003d\"https://soffront.com/marketing-automation/\"\u003eMarketing Automation\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-2564",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-2564\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2564\"\u003e\u003ca href\u003d\"https://soffront.com/marketing-automation/\"\u003eMarketing Automation\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    ".et_first_mobile_item \u003e .sub-menu \u003e .menu-item-2564.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-2564.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-5015\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-5015\"\u003e\u003ca href\u003d\"https://soffront.com/sales-automation-software/\"\u003eSales Automation\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-5015",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-5015\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-5015\"\u003e\u003ca href\u003d\"https://soffront.com/sales-automation-software/\"\u003eSales Automation\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    ".et_first_mobile_item \u003e .sub-menu \u003e .menu-item-5015.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-5015.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-2563\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2563\"\u003e\u003ca href\u003d\"https://soffront.com/crm-software/\" title\u003d\"CRM Software\"\u003eService Automation\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-2563",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-2563\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-2563\"\u003e\u003ca href\u003d\"https://soffront.com/crm-software/\" title\u003d\"CRM Software\"\u003eService Automation\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    ".et_first_mobile_item \u003e .sub-menu \u003e .menu-item-2563.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-2563.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-5607\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-5607\"\u003e\u003ca href\u003d\"https://soffront.com/on-premise-crm-software/\"\u003eOn-Premise CRM\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-5607",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-5607\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-5607\"\u003e\u003ca href\u003d\"https://soffront.com/on-premise-crm-software/\"\u003eOn-Premise CRM\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    ".et_first_mobile_item \u003e .sub-menu \u003e .menu-item-5607.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-5607.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-5469\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-5469\"\u003e\u003ca href\u003d\"https://soffront.com/white-label-crm/\"\u003eWhite Label CRM\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-5469",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-5469\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-5469\"\u003e\u003ca href\u003d\"https://soffront.com/white-label-crm/\"\u003eWhite Label CRM\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    ".et_first_mobile_item \u003e .sub-menu \u003e .menu-item-5469.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-5469.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-4222\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4222\"\u003e\u003ca target\u003d\"_blank\" href\u003d\"https://meetbrandwide.com\"\u003eFranchise CRM\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-4222",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-4222\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4222\"\u003e\u003ca target\u003d\"_blank\" href\u003d\"https://meetbrandwide.com\"\u003eFranchise CRM\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    ".et_first_mobile_item \u003e .sub-menu \u003e .menu-item-4222.menu-item-type-custom.menu-item-object-custom"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-67.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-4222.menu-item-type-custom.menu-item-object-custom"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-76\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-76\"\u003e\u003ca href\u003d\"https://soffront.com/customers/\"\u003eCase Studies\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-76",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-76\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-76\"\u003e\u003ca href\u003d\"https://soffront.com/customers/\"\u003eCase Studies\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-76.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-76.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-295\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-295\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-295",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-295\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-295\"\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-295.menu-item-has-children.menu-item-type-post_type"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-295.menu-item-has-children.menu-item-type-post_type"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-4693\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4693\"\u003e\u003ca href\u003d\"https://soffront.com/partners/\"\u003ePartner Program\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-4693",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-4693\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4693\"\u003e\u003ca href\u003d\"https://soffront.com/partners/\"\u003ePartner Program\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-295.menu-item-has-children.menu-item-type-post_type \u003e .sub-menu \u003e .menu-item-4693.menu-item-type-custom.menu-item-object-custom"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-295.menu-item-has-children.menu-item-type-post_type \u003e .sub-menu \u003e .menu-item-4693.menu-item-type-custom.menu-item-object-custom"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-4212\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4212\"\u003e\u003ca target\u003d\"_blank\" href\u003d\"https://partnerportal.soffront.com\"\u003ePartner Portal\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-4212",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-4212\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-4212\"\u003e\u003ca target\u003d\"_blank\" href\u003d\"https://partnerportal.soffront.com\"\u003ePartner Portal\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-295.menu-item-has-children.menu-item-type-post_type \u003e .sub-menu \u003e .menu-item-4212.menu-item-type-custom.menu-item-object-custom"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-295.menu-item-has-children.menu-item-type-post_type \u003e .sub-menu \u003e .menu-item-4212.menu-item-type-custom.menu-item-object-custom"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-3611\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3611\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-3611",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-3611\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3611\"\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-62\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-62\"\u003e\u003ca href\u003d\"https://soffront.com/about-soffront/\" title\u003d\"About Soffront\"\u003eAbout\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-62",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-62\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-62\"\u003e\u003ca href\u003d\"https://soffront.com/about-soffront/\" title\u003d\"About Soffront\"\u003eAbout\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-62.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-62.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-518\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-518\"\u003e\u003ca href\u003d\"https://soffront.com/resources/\"\u003eResources\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-518",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-518\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-518\"\u003e\u003ca href\u003d\"https://soffront.com/resources/\"\u003eResources\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-518.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-518.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-179\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-179\"\u003e\u003ca href\u003d\"https://soffront.com/contact-us/\"\u003eContact\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-179",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-179\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-179\"\u003e\u003ca href\u003d\"https://soffront.com/contact-us/\"\u003eContact\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-179.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-3611.menu-item-has-children.menu-item-type-custom \u003e .sub-menu \u003e .menu-item-179.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-3306\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-3306\"\u003e\u003ca href\u003d\"https://soffront.com/crm-blog/\"\u003eBlog\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-3306",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-3306\" class\u003d\"menu-item menu-item-type-post_type menu-item-object-page menu-item-3306\"\u003e\u003ca href\u003d\"https://soffront.com/crm-blog/\"\u003eBlog\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-3306.menu-item-type-post_type.menu-item-object-page"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-3306.menu-item-type-post_type.menu-item-object-page"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-3612\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-3612\"\u003e\u003ca target\u003d\"_blank\" href\u003d\"https://app.soffront.com\"\u003eLogin\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-3612",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-3612\" class\u003d\"menu-item menu-item-type-custom menu-item-object-custom menu-item-3612\"\u003e\u003ca target\u003d\"_blank\" href\u003d\"https://app.soffront.com\"\u003eLogin\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .menu-item-3612.menu-item-type-custom.menu-item-object-custom"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .menu-item-3612.menu-item-type-custom.menu-item-object-custom"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Document has multiple static elements with the same id attribute",
+          "impact": "minor",
+          "html": "\u003cli id\u003d\"menu-item-4425\" class\u003d\"cta-button menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-4425\"\u003e\u003ca href\u003d\"https://soffront.com/book-appointment/\" aria-current\u003d\"page\"\u003eRequest More Info\u003c/a\u003e\u003c/li\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "menu-item-4425",
+              "impact": "minor",
+              "relatedNodes": [
+                {
+                  "html": "\u003cli id\u003d\"menu-item-4425\" class\u003d\"cta-button menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-4425\"\u003e\u003ca href\u003d\"https://soffront.com/book-appointment/\" aria-current\u003d\"page\"\u003eRequest More Info\u003c/a\u003e\u003c/li\u003e",
+                  "target": [
+                    "#mobile_menu \u003e .cta-button.current-menu-item.menu-item-4425"
+                  ]
+                }
+              ],
+              "id": "duplicate-id",
+              "message": "Document has multiple static elements with the same id attribute"
+            }
+          ],
+          "target": [
+            "#top-menu \u003e .cta-button.current-menu-item.menu-item-4425"
+          ]
+        }
+      ],
+      "impact": "minor",
+      "description": "Ensures every id attribute value is unique",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application\u003daxeAPI",
+      "id": "duplicate-id",
+      "tags": [
+        "cat.parsing",
+        "wcag2a",
+        "wcag411"
+      ]
+    },
+    {
+      "help": "Heading levels should only increase by one",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Heading order invalid",
+          "impact": "moderate",
+          "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eIncrease Lead Conversion\u003c/h4\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": 4,
+              "impact": "moderate",
+              "relatedNodes": [],
+              "id": "heading-order",
+              "message": "Heading order invalid"
+            }
+          ],
+          "target": [
+            ".et_pb_blurb_0 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Heading order invalid",
+          "impact": "moderate",
+          "html": "\u003ch4 style\u003d\"color: #ffffff\"\u003eEMAIL\u003c/h4\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": 4,
+              "impact": "moderate",
+              "relatedNodes": [],
+              "id": "heading-order",
+              "message": "Heading order invalid"
+            }
+          ],
+          "target": [
+            "#text-3 \u003e .textwidget \u003e div \u003e h4"
+          ]
+        }
+      ],
+      "impact": "moderate",
+      "description": "Ensures the order of headings is semantically correct",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application\u003daxeAPI",
+      "id": "heading-order",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ]
+    },
+    {
+      "help": "Form elements should have a visible label",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element",
+          "impact": "serious",
+          "html": "\u003cinput type\u003d\"search\" class\u003d\"et-search-field\" placeholder\u003d\"Search …\" value\u003d\"\" name\u003d\"s\" title\u003d\"Search for:\"\u003e",
+          "none": [
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "title-only",
+              "message": "Only title used to generate label for form element"
+            }
+          ],
+          "any": [],
+          "target": [
+            ".et-search-field"
+          ]
+        }
+      ],
+      "impact": "serious",
+      "description": "Ensures that every form element is not solely labeled using the title or aria-describedby attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/label-title-only?application\u003daxeAPI",
+      "id": "label-title-only",
+      "tags": [
+        "cat.forms",
+        "best-practice"
+      ]
+    },
+    {
+      "help": "Form elements must have labels",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Form element does not have an implicit (wrapped) \u003clabel\u003e\n  Form element does not have an explicit \u003clabel\u003e\n  Element has no title attribute or the title attribute is empty",
+          "impact": "critical",
+          "html": "\u003cinput id\u003d\"email\" name\u003d\"email\" placeholder\u003d\"Enter Email (required)\" label\u003d\"Email\" fieldtype\u003d\"201\" emailfield\u003d\"1\" type\u003d\"email\" required\u003d\"required\" maxlength\u003d\"128\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-label",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-labelledby",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "impact": "critical",
+              "relatedNodes": [],
+              "id": "implicit-label",
+              "message": "Form element does not have an implicit (wrapped) \u003clabel\u003e"
+            },
+            {
+              "impact": "critical",
+              "relatedNodes": [],
+              "id": "explicit-label",
+              "message": "Form element does not have an explicit \u003clabel\u003e"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "non-empty-title",
+              "message": "Element has no title attribute or the title attribute is empty"
+            }
+          ],
+          "target": [
+            "#email"
+          ]
+        }
+      ],
+      "impact": "critical",
+      "description": "Ensures every form element has a label",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/label?application\u003daxeAPI",
+      "id": "label",
+      "tags": [
+        "cat.forms",
+        "wcag2a",
+        "wcag332",
+        "wcag131",
+        "section508",
+        "section508.22.n"
+      ]
+    },
+    {
+      "help": "Page must have one main landmark",
+      "nodes": [
+        {
+          "all": [
+            {
+              "impact": "moderate",
+              "relatedNodes": [],
+              "id": "page-has-main",
+              "message": "Page does not have a main landmark"
+            }
+          ],
+          "failureSummary": "Fix all of the following:\n  Page does not have a main landmark",
+          "impact": "moderate",
+          "html": "\u003chtml lang\u003d\"en-US\" prefix\u003d\"og: http://ogp.me/ns#\" class\u003d\"js\"\u003e",
+          "none": [],
+          "any": [],
+          "target": [
+            "html"
+          ]
+        }
+      ],
+      "impact": "moderate",
+      "description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application\u003daxeAPI",
+      "id": "landmark-one-main",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ]
+    },
+    {
+      "help": "Links must have discernible text",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element\u0027s default semantics were not overridden with role\u003d\"presentation\"\n  Element\u0027s default semantics were not overridden with role\u003d\"none\"",
+          "impact": "serious",
+          "html": "\u003ca href\u003d\"https://www.facebook.com/soffront\" class\u003d\"icon\"\u003e \u003cspan\u003eFacebook\u003c/span\u003e \u003c/a\u003e",
+          "none": [
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "focusable-no-name",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "any": [
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "has-visible-text",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-label",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-labelledby",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-presentation",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"presentation\""
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-none",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"none\""
+            }
+          ],
+          "target": [
+            ".et-social-facebook \u003e .icon"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element\u0027s default semantics were not overridden with role\u003d\"presentation\"\n  Element\u0027s default semantics were not overridden with role\u003d\"none\"",
+          "impact": "serious",
+          "html": "\u003ca href\u003d\"https://twitter.com/soffront\" class\u003d\"icon\"\u003e \u003cspan\u003eTwitter\u003c/span\u003e \u003c/a\u003e",
+          "none": [
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "focusable-no-name",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "any": [
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "has-visible-text",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-label",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-labelledby",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-presentation",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"presentation\""
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-none",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"none\""
+            }
+          ],
+          "target": [
+            ".et-social-twitter \u003e a[href$\u003d\"soffront\"]"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element\u0027s default semantics were not overridden with role\u003d\"presentation\"\n  Element\u0027s default semantics were not overridden with role\u003d\"none\"",
+          "impact": "serious",
+          "html": "\u003ca href\u003d\"https://plus.google.com/+soffront\" class\u003d\"icon\"\u003e \u003cspan\u003eGoogle\u003c/span\u003e \u003c/a\u003e",
+          "none": [
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "focusable-no-name",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "any": [
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "has-visible-text",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-label",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-labelledby",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-presentation",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"presentation\""
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-none",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"none\""
+            }
+          ],
+          "target": [
+            ".et-social-google-plus \u003e .icon"
+          ]
+        },
+        {
+          "all": [],
+          "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element\u0027s default semantics were not overridden with role\u003d\"presentation\"\n  Element\u0027s default semantics were not overridden with role\u003d\"none\"",
+          "impact": "serious",
+          "html": "\u003ca href\u003d\"https://soffront.com/blog/\" class\u003d\"icon\"\u003e \u003cspan\u003eRSS\u003c/span\u003e \u003c/a\u003e",
+          "none": [
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "focusable-no-name",
+              "message": "Element is in tab order and does not have accessible text"
+            }
+          ],
+          "any": [
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "has-visible-text",
+              "message": "Element does not have text that is visible to screen readers"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-label",
+              "message": "aria-label attribute does not exist or is empty"
+            },
+            {
+              "impact": "serious",
+              "relatedNodes": [],
+              "id": "aria-labelledby",
+              "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-presentation",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"presentation\""
+            },
+            {
+              "impact": "minor",
+              "relatedNodes": [],
+              "id": "role-none",
+              "message": "Element\u0027s default semantics were not overridden with role\u003d\"none\""
+            }
+          ],
+          "target": [
+            ".et-social-rss \u003e a[href$\u003d\"blog/\"]"
+          ]
+        }
+      ],
+      "impact": "serious",
+      "description": "Ensures links have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI",
+      "id": "link-name",
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "wcag244",
+        "section508",
+        "section508.22.a"
+      ]
+    },
+    {
+      "help": "Zooming and scaling must not be disabled",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  maximum-scale on \u003cmeta\u003e tag disables zooming on mobile devices",
+          "impact": "critical",
+          "html": "\u003cmeta name\u003d\"viewport\" content\u003d\"width\u003ddevice-width, initial-scale\u003d1.0, maximum-scale\u003d1.0, user-scalable\u003d0\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "data": "maximum-scale",
+              "impact": "critical",
+              "relatedNodes": [],
+              "id": "meta-viewport",
+              "message": "maximum-scale on \u003cmeta\u003e tag disables zooming on mobile devices"
+            }
+          ],
+          "target": [
+            "meta[name\u003d\"viewport\"]"
+          ]
+        }
+      ],
+      "impact": "critical",
+      "description": "Ensures \u003cmeta name\u003d\"viewport\"\u003e does not disable text scaling and zooming",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application\u003daxeAPI",
+      "id": "meta-viewport",
+      "tags": [
+        "cat.sensory-and-visual-cues",
+        "wcag2aa",
+        "wcag144"
+      ]
+    },
+    {
+      "help": "All page content must be contained by landmarks",
+      "nodes": [
+        {
+          "all": [],
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks",
+          "impact": "moderate",
+          "html": "\u003chtml lang\u003d\"en-US\" prefix\u003d\"og: http://ogp.me/ns#\" class\u003d\"js\"\u003e",
+          "none": [],
+          "any": [
+            {
+              "impact": "moderate",
+              "relatedNodes": [
+                {
+                  "html": "\u003cspan id\u003d\"et-info-phone\"\u003e1-800-SOFFRONT\u003c/span\u003e",
+                  "target": [
+                    "#et-info-phone"
+                  ]
+                },
+                {
+                  "html": "\u003cspan id\u003d\"et-info-email\"\u003esales@soffront.com\u003c/span\u003e",
+                  "target": [
+                    "#et-info-email"
+                  ]
+                },
+                {
+                  "html": "\u003cstrong\u003eRequest More\u003cbr\u003e Information\u003c/strong\u003e",
+                  "target": [
+                    "h1 \u003e strong"
+                  ]
+                },
+                {
+                  "html": "\u003cli\u003eComplete CRM and Marketing suite\u003c/li\u003e",
+                  "target": [
+                    ".et_pb_text_inner \u003e ul \u003e li:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "\u003cli\u003ePersonalized onboarding \u0026amp; training\u003c/li\u003e",
+                  "target": [
+                    ".et_pb_text_inner \u003e ul \u003e li:nth-child(2)"
+                  ]
+                },
+                {
+                  "html": "\u003cli\u003e24x7x365 support\u003c/li\u003e",
+                  "target": [
+                    ".et_pb_text_inner \u003e ul \u003e li:nth-child(3)"
+                  ]
+                },
+                {
+                  "html": "\u003ch2\u003eComplete CRM \u0026amp; Marketing Suite\u003c/h2\u003e",
+                  "target": [
+                    ".et_pb_text_2 \u003e .et_pb_text_inner \u003e h2"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003ePersonalized Onboarding \u0026amp; Support\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_text_2 \u003e .et_pb_text_inner \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003cspan class\u003d\"et-pb-icon et-waypoint et_pb_animation_off et-animated\" style\u003d\"color: #5c6bc0;\"\u003e\u003c/span\u003e",
+                  "target": [
+                    ".et_pb_blurb_0 \u003e .et_pb_blurb_content \u003e .et_pb_main_blurb_image \u003e .et_pb_image_wrap \u003e .et-waypoint.et_pb_animation_off.et-animated"
+                  ]
+                },
+                {
+                  "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eIncrease Lead Conversion\u003c/h4\u003e",
+                  "target": [
+                    ".et_pb_blurb_0 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eNurture and convert more leads with email newsletters and automated email drip campaigns.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_blurb_0 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_blurb_description \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003cspan class\u003d\"et-pb-icon et-waypoint et_pb_animation_off et-animated\" style\u003d\"color: #ef5350;\"\u003ew\u003c/span\u003e",
+                  "target": [
+                    ".et_pb_blurb_1 \u003e .et_pb_blurb_content \u003e .et_pb_main_blurb_image \u003e .et_pb_image_wrap \u003e .et-waypoint.et_pb_animation_off.et-animated"
+                  ]
+                },
+                {
+                  "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eAutomate Follow-ups\u003c/h4\u003e",
+                  "target": [
+                    ".et_pb_blurb_1 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eSave time by sending emails, text messages, and make phone calls using pre-built communication templates.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_blurb_1 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_blurb_description \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003cspan class\u003d\"et-pb-icon et-waypoint et_pb_animation_off et-animated\" style\u003d\"color: #66bb6a;\"\u003e\u003c/span\u003e",
+                  "target": [
+                    ".et_pb_blurb_2 \u003e .et_pb_blurb_content \u003e .et_pb_main_blurb_image \u003e .et_pb_image_wrap \u003e .et-waypoint.et_pb_animation_off.et-animated"
+                  ]
+                },
+                {
+                  "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eBuild Your Brand\u003c/h4\u003e",
+                  "target": [
+                    ".et_pb_blurb_2 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eBuild your brand and utilize social media using social posting and content discovery.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_blurb_2 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_blurb_description \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003cspan class\u003d\"et-pb-icon et-waypoint et_pb_animation_off et-animated\" style\u003d\"color: #039be5;\"\u003e\u003c/span\u003e",
+                  "target": [
+                    ".et_pb_blurb_3 \u003e .et_pb_blurb_content \u003e .et_pb_main_blurb_image \u003e .et_pb_image_wrap \u003e .et-waypoint.et_pb_animation_off.et-animated"
+                  ]
+                },
+                {
+                  "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eGet New Appointments\u003c/h4\u003e",
+                  "target": [
+                    ".et_pb_blurb_3 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eGet new appointments automatically by sharing your own personal appointment scheduler.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_blurb_3 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_blurb_description \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003cspan class\u003d\"et-pb-icon et-waypoint et_pb_animation_off et-animated\" style\u003d\"color: #f4511e;\"\u003e\u003c/span\u003e",
+                  "target": [
+                    ".et_pb_blurb_4 \u003e .et_pb_blurb_content \u003e .et_pb_main_blurb_image \u003e .et_pb_image_wrap \u003e .et-waypoint.et_pb_animation_off.et-animated"
+                  ]
+                },
+                {
+                  "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eImprove Your Efficiency\u003c/h4\u003e",
+                  "target": [
+                    ".et_pb_blurb_4 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eOrganize your day and follow-up on time to get more appointments with inbuilt calendar and reminders.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_blurb_4 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_blurb_description \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003cspan class\u003d\"et-pb-icon et-waypoint et_pb_animation_off et-animated\" style\u003d\"color: #26a69a;\"\u003e\u003c/span\u003e",
+                  "target": [
+                    ".et_pb_blurb_5 \u003e .et_pb_blurb_content \u003e .et_pb_main_blurb_image \u003e .et_pb_image_wrap \u003e .et-waypoint.et_pb_animation_off.et-animated"
+                  ]
+                },
+                {
+                  "html": "\u003ch4 class\u003d\"et_pb_module_header\"\u003eBetter Customer Retention\u003c/h4\u003e",
+                  "target": [
+                    ".et_pb_blurb_5 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_module_header"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eImprove customer retention and loyalty by sending offers and coupons to your customers.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_blurb_5 \u003e .et_pb_blurb_content \u003e .et_pb_blurb_container \u003e .et_pb_blurb_description \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_0 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eRequest More Info\u003c/a\u003e",
+                  "target": [
+                    ".et_pb_button_0"
+                  ]
+                },
+                {
+                  "html": "\u003ch2\u003e” We have been a customer of Soffront for ten years. Year after year, Soffront meets our ever-changing needs by providing time-saving and business enhancing features. “\u003c/h2\u003e",
+                  "target": [
+                    ".et_pb_text_3 \u003e .et_pb_text_inner \u003e h2"
+                  ]
+                },
+                {
+                  "html": "\u003cstrong\u003eAndre Fidellow, VP, HealthTec Software, Inc\u003c/strong\u003e",
+                  "target": [
+                    "p \u003e strong"
+                  ]
+                },
+                {
+                  "html": "\u003ch2\u003ePersonalized 24x7x365 Phone Support For Everyone\u003c/h2\u003e",
+                  "target": [
+                    ".et_pb_text_4 \u003e .et_pb_text_inner \u003e h2"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eNo more wait time. If you need help, simply pick up the phone and speak to a success adviser who’ll know how you are set up.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_text_5 \u003e .et_pb_text_inner \u003e p"
+                  ]
+                },
+                {
+                  "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_1 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eSchedule a Demo\u003c/a\u003e",
+                  "target": [
+                    ".et_pb_button_1"
+                  ]
+                },
+                {
+                  "html": "\u003cimg decoding\u003d\"async\" src\u003d\"https://soffront.wpenginepowered.com/wp-content/uploads/2020/07/video_call.png\" alt\u003d\"\"\u003e",
+                  "target": [
+                    "img[alt\u003d\"\"]"
+                  ]
+                },
+                {
+                  "html": "\u003ch2\u003eLoved By 20,000 Small Businesses\u003c/h2\u003e",
+                  "target": [
+                    ".et_pb_text_6 \u003e .et_pb_text_inner \u003e h2"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eI love Soffront CRM \u0026amp; Marketing Automation because it grows with you and your business.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_testimonial_0 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e p:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "\u003cstrong class\u003d\"et_pb_testimonial_author\"\u003eJeanne Moore\u003c/strong\u003e",
+                  "target": [
+                    ".et_pb_testimonial_0 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e .et_pb_testimonial_author"
+                  ]
+                },
+                {
+                  "html": "\u003cp class\u003d\"et_pb_testimonial_meta\"\u003eConnections HCC\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_testimonial_0 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e .et_pb_testimonial_meta"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eMy campaigns generated high-quality leads that have contributed to revenue growth.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_testimonial_1 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e p:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "\u003cstrong class\u003d\"et_pb_testimonial_author\"\u003e Michael Sturman\u003c/strong\u003e",
+                  "target": [
+                    ".et_pb_testimonial_1 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e .et_pb_testimonial_author"
+                  ]
+                },
+                {
+                  "html": "\u003cp class\u003d\"et_pb_testimonial_meta\"\u003eMoney Mailer of Tallahassee\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_testimonial_1 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e .et_pb_testimonial_meta"
+                  ]
+                },
+                {
+                  "html": "\u003cp\u003eThe team at Soffront is there to help you and your organization succeed.\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_testimonial_2 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e p:nth-child(1)"
+                  ]
+                },
+                {
+                  "html": "\u003cstrong class\u003d\"et_pb_testimonial_author\"\u003eAndrew Erskine\u003c/strong\u003e",
+                  "target": [
+                    ".et_pb_testimonial_2 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e .et_pb_testimonial_author"
+                  ]
+                },
+                {
+                  "html": "\u003cp class\u003d\"et_pb_testimonial_meta\"\u003eFirst Choice Business Brokers\u003c/p\u003e",
+                  "target": [
+                    ".et_pb_testimonial_2 \u003e .et_pb_testimonial_description \u003e .et_pb_testimonial_description_inner \u003e .et_pb_testimonial_meta"
+                  ]
+                },
+                {
+                  "html": "\u003ca class\u003d\"et_pb_button  et_pb_button_2 et_pb_module et_pb_bg_layout_dark\" href\u003d\"#demo\"\u003eRequest More Info\u003c/a\u003e",
+                  "target": [
+                    ".et_pb_button_2"
+                  ]
+                }
+              ],
+              "id": "region",
+              "message": "Some page content is not contained by landmarks"
+            }
+          ],
+          "target": [
+            "html"
+          ]
+        }
+      ],
+      "impact": "moderate",
+      "description": "Ensures all page content is contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+      "id": "region",
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ]
+    }
+  ]
+}

@@ -26,15 +26,11 @@
 	<artifactId>VisualTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Axis2 Quickstart Sample</name>
-
 	<properties>
-		<axis2.version>2.0.0</axis2.version>
-		<maven.comliler.source>1.8</maven.comliler.source>
+	<axis2.version>2.0.0</axis2.version>
+	<maven.comliler.source>1.8</maven.comliler.source>
 <maven.comliler.source>1.8</maven.comliler.source>
 	</properties>
-
-	
-
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.axis2</groupId>
@@ -47,6 +43,23 @@
     <artifactId>poi-ooxml</artifactId>
     <version>5.2.5</version> <!-- Latest stable version -->
 </dependency>	
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.5</version>
+</dependency>
+<dependency>
+  <groupId>com.google.code.gson</groupId>
+  <artifactId>gson</artifactId>
+  <version>2.10.1</version>
+</dependency>
+
+    <dependency>
+        <groupId>net.sourceforge.tess4j</groupId>
+        <artifactId>tess4j</artifactId>
+        <version>5.4.0</version>
+    </dependency>
+
 		<dependency>
 			<groupId>org.apache.axis2</groupId>
 			<artifactId>axis2-transport-http</artifactId>
@@ -69,7 +82,7 @@
     <artifactId>json</artifactId>
     <version>20240303</version>
 </dependency>
-  	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-log4j12</artifactId>
@@ -173,16 +186,17 @@
   <artifactId>boofcv-recognition</artifactId>
   <version>0.42</version>
 </dependency>
-
-
+<dependency>
+    <groupId>org.boofcv</groupId>
+    <artifactId>boofcv-all</artifactId>
+    <version>1.0.0</version>
+</dependency>
 	</dependencies>
 	<build>
-	
 	<testSourceDirectory>
 		src/test/java
 	</testSourceDirectory>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -191,7 +205,6 @@
 					<target>1.5</target>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.axis2</groupId>
 				<artifactId>simple-server-maven-plugin</artifactId>

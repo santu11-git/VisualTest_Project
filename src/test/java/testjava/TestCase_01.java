@@ -26,10 +26,10 @@ import VisualTest.VisualTest.HybridA11YVisionConnector;
 import VisualTest.VisualTest.ImageComparisonUpdatedUtil;
 import VisualTest.VisualTest.ImageComparisonUtil;
 import VisualTest.VisualTest.ImageMultipleComparisonUtil;
+import VisualTest.VisualTest.ResponsiveCDPUtil;
 import VisualTest.VisualTest.VisionAIUtil;
 import VisualTest.VisualTest.VisualAnomalyDetector;
 import VisualTest.VisualTest.VisualComparisonBatchUtil;
-import VisualTest.VisualTest.VisualTesting10_ElementwiseSS;
 import dev.failsafe.internal.util.Assert;
 import org.testng.asserts.*;
 import org.testng.*;
@@ -60,23 +60,14 @@ public class TestCase_01 {
 
 	    driver.quit();
 	}
-	@Test
-	public void TakeBaselineSSElementwise() throws Exception {
-		
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.way2automation.com/lifetime-membership-club/");
-		driver.manage().window().maximize();
-		driver.manage().window().setSize(new Dimension(1920, 1080)); 
-		WebElement SS1= driver.findElement(By.xpath("(//h4[@class='elementor-heading-title elementor-size-default'])[5]"));
-		VisualTesting10_ElementwiseSS.captureElementScreenshot(driver, SS1);
-		driver.quit();
-	}
 	
 	// This is for Baseline SS capture - Single SS (Not for Multiple Page in one Cycle):
 	@Test 
-	public void takeFullPageBaselineScreenshotBaseline() throws Exception {
+	public void takeFullPageScreenshotBaseline() throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://sauce-demo.myshopify.com/");
+		// ResponsiveCDPUtil.setMobileView(driver);
+		Thread.sleep(5000);
 		driver.manage().window().maximize();
 		// For Single Page:
 		FullPageScreenshotBaselineUtil.captureFullPageScreenshotBaseline(driver, "baselineScreenshots");
@@ -86,9 +77,11 @@ public class TestCase_01 {
 	
 	// This is for Actual SS capture - Single SS (Not for Multiple Page in one Cycle):
 	@Test 
-	public void takeFullPageBaselineScreenshotActual() throws Exception {
+	public void takeFullPageScreenshotActual() throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://sauce-demo.myshopify.com/");
+		//ResponsiveCDPUtil.setMobileView(driver);
+		Thread.sleep(5000);
 		driver.manage().window().maximize();
 		// For Single Screenshots
 		
@@ -119,7 +112,6 @@ public class TestCase_01 {
 	        }
 	    
 	}
-
 	
 	// This is the final Baseline vs Actual comparison Test Case: New One
 	@Test
@@ -133,8 +125,7 @@ public class TestCase_01 {
         else {
             System.out.println("❌ Visual Test Failed: Differences found.");
             // Fail the test in TestNG if any difference found
-         }
-	    
+         }  
 	}
 	
 	

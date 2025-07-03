@@ -1,5 +1,6 @@
 package VisualTest.VisualTest;
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -20,34 +21,44 @@ import ru.yandex.qatools.ashot.Screenshot;
 public class ActualScreenshot {
 
 	 public static void captureFullPageScreenshotActual(WebDriver driver, String folderName) throws Exception {
-	        JavascriptExecutor js = (JavascriptExecutor) driver;
-	        Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");
+	      JavascriptExecutor js = (JavascriptExecutor) driver;
 
+	        // Get full page and viewport height
+	        Long scrollHeight = (Long) js.executeScript("return document.body.scrollHeight");
 	        Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
 
 	        List<BufferedImage> capturedImages = new ArrayList<>();
 	        int yOffset = 0;
+	        int scrollBuffer = 50; // Overlap buffer to reduce stitching glitches
 
-	        while (yOffset < totalHeight) {
-	            js.executeScript("window.scrollTo(0, arguments[0])", yOffset);
-	            Thread.sleep(800);
+	        // Capture screenshots by scrolling down in steps
+	        while (yOffset < scrollHeight) {
+	            js.executeScript("window.scrollTo(0, arguments[0]);", yOffset);
+	            Thread.sleep(800); // Allow page to render fully
 
 	            Screenshot screenshot = new AShot().takeScreenshot(driver);
-	            capturedImages.add(screenshot.getImage());
+	            BufferedImage image = screenshot.getImage();
+	            capturedImages.add(image);
 
-	            yOffset += viewportHeight;
+	            int actualCapturedHeight = image.getHeight();
+	            yOffset += (actualCapturedHeight - scrollBuffer);
 	        }
 
-	        int fullImageWidth = capturedImages.get(0).getWidth();
-	        int fullImageHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
+	        // Stitch all captured images vertically
+	        int finalWidth = capturedImages.get(0).getWidth();
+	        int finalHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
 
-	        BufferedImage finalImage = new BufferedImage(fullImageWidth, fullImageHeight, BufferedImage.TYPE_INT_RGB);
+	        BufferedImage finalImage = new BufferedImage(finalWidth, finalHeight, BufferedImage.TYPE_INT_RGB);
+	        Graphics graphics = finalImage.getGraphics();
+
 	        int currentHeight = 0;
-	        for (BufferedImage image : capturedImages) {
-	            finalImage.getGraphics().drawImage(image, 0, currentHeight, null);
-	            currentHeight += image.getHeight();
+	        for (BufferedImage img : capturedImages) {
+	            graphics.drawImage(img, 0, currentHeight, null);
+	            currentHeight += img.getHeight();
 	        }
+	        graphics.dispose(); // Clean up
 
+	        // Save stitched image with timestamp
 	        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 	        String folderPath = "src/main/resources/ActualSS";
 	        File folder = new File(folderPath);
@@ -57,12 +68,6 @@ public class ActualScreenshot {
 	        ImageIO.write(finalImage, "png", output);
 
 	        System.out.println("✅ Full stitched screenshot saved at: " + output.getAbsolutePath());
-	    }
-
-	    public static WebDriver getChromeDriver() {
-	        WebDriver driver = new ChromeDriver();
-	        driver.manage().window().maximize();
-	        return driver;
 	    }
 	    
 	 // For Multiple Screenshots:

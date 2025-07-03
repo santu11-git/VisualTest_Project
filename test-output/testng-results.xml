@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-17T22:16:56 IST" name="Default suite" finished-at="2025-06-17T22:16:58 IST" duration-ms="1377">
+  <suite started-at="2025-07-03T22:29:21 IST" name="Default suite" finished-at="2025-07-03T22:29:21 IST" duration-ms="789">
     <groups>
     </groups>
-    <test started-at="2025-06-17T22:16:56 IST" name="Default test" finished-at="2025-06-17T22:16:58 IST" duration-ms="1377">
-      <class name="testjava.TestCase_01">
-        <test-method signature="GPTResponse()[pri:0, instance:testjava.TestCase_01@40a4337a]" started-at="2025-06-17T22:16:56 IST" name="GPTResponse" finished-at="2025-06-17T22:16:58 IST" duration-ms="1347" status="PASS">
+    <test started-at="2025-07-03T22:29:21 IST" name="Default test" finished-at="2025-07-03T22:29:21 IST" duration-ms="789">
+      <class name="testjava.TestCase_02">
+        <test-method signature="VisualTestRunnerMultipleImage1()[pri:0, instance:testjava.TestCase_02@71e9ddb4]" started-at="2025-07-03T22:29:21 IST" name="VisualTestRunnerMultipleImage1" finished-at="2025-07-03T22:29:21 IST" duration-ms="746" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GPTResponse -->
-      </class> <!-- testjava.TestCase_01 -->
+        </test-method> <!-- VisualTestRunnerMultipleImage1 -->
+      </class> <!-- testjava.TestCase_02 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

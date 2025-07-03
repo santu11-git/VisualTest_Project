@@ -1,0 +1,93 @@
+[
+  {
+    "ViolationID": "color-contrast",
+    "Impact": "serious",
+    "Description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI",
+    "Selectors": [
+      "nav \u003e a[href$\u003d\"login\"]"
+    ]
+  },
+  {
+    "ViolationID": "duplicate-id-active",
+    "Impact": "serious",
+    "Description": "Ensures every id attribute value of active elements is unique",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id-active?application\u003daxeAPI",
+    "Selectors": [
+      "nav \u003e a[href$\u003d\"login\"]"
+    ]
+  },
+  {
+    "ViolationID": "heading-order",
+    "Impact": "moderate",
+    "Description": "Ensures the order of headings is semantically correct",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application\u003daxeAPI",
+    "Selectors": [
+      "#tagline \u003e h3"
+    ]
+  },
+  {
+    "ViolationID": "html-has-lang",
+    "Impact": "serious",
+    "Description": "Ensures every HTML document has a lang attribute",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/html-has-lang?application\u003daxeAPI",
+    "Selectors": [
+      "#adroll_slg",
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "label",
+    "Impact": "critical",
+    "Description": "Ensures every form element has a label",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/label?application\u003daxeAPI",
+    "Selectors": [
+      "#search-field"
+    ]
+  },
+  {
+    "ViolationID": "landmark-one-main",
+    "Impact": "moderate",
+    "Description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "link-name",
+    "Impact": "serious",
+    "Description": "Ensures links have discernible text",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI",
+    "Selectors": [
+      ".facebook"
+    ]
+  },
+  {
+    "ViolationID": "meta-viewport",
+    "Impact": "critical",
+    "Description": "Ensures \u003cmeta name\u003d\"viewport\"\u003e does not disable text scaling and zooming",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application\u003daxeAPI",
+    "Selectors": [
+      "meta[name\u003d\"viewport\"]"
+    ]
+  },
+  {
+    "ViolationID": "region",
+    "Impact": "moderate",
+    "Description": "Ensures all page content is contained by landmarks",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "skip-link",
+    "Impact": "moderate",
+    "Description": "Ensure all skip links have a focusable target",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/skip-link?application\u003daxeAPI",
+    "Selectors": [
+      "a[href$\u003d\"#sauce-show-wish-list\"]"
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "ViolationID": "color-contrast",
+    "Impact": "serious",
+    "Description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI",
+    "Selectors": [
+      ".col-md-6.mb-4.col-lg-4:nth-child(1) \u003e .card.h-100 \u003e .card-block \u003e h5"
+    ]
+  },
+  {
+    "ViolationID": "duplicate-id-active",
+    "Impact": "serious",
+    "Description": "Ensures every id attribute value of active elements is unique",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id-active?application\u003daxeAPI",
+    "Selectors": [
+      "a[onclick\u003d\"byCat\\(\\\u0027phone\\\u0027\\)\"]"
+    ]
+  },
+  {
+    "ViolationID": "duplicate-id",
+    "Impact": "minor",
+    "Description": "Ensures every id attribute value is unique",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application\u003daxeAPI",
+    "Selectors": [
+      ".col-md-6.mb-4.col-lg-4:nth-child(1) \u003e .card.h-100 \u003e .card-block \u003e .card-text"
+    ]
+  },
+  {
+    "ViolationID": "image-alt",
+    "Impact": "critical",
+    "Description": "Ensures \u003cimg\u003e elements have alternate text or a role of none or presentation",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/image-alt?application\u003daxeAPI",
+    "Selectors": [
+      "#nava \u003e img[width\u003d\"\\35 0\"][height\u003d\"\\35 0\"][src$\u003d\"bm.png\"]"
+    ]
+  },
+  {
+    "ViolationID": "landmark-one-main",
+    "Impact": "moderate",
+    "Description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "link-name",
+    "Impact": "serious",
+    "Description": "Ensures links have discernible text",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI",
+    "Selectors": [
+      ".card.h-100 \u003e a[href\u003d\"prod.html?idp_\u003d1\"]"
+    ]
+  },
+  {
+    "ViolationID": "page-has-heading-one",
+    "Impact": "moderate",
+    "Description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/page-has-heading-one?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "region",
+    "Impact": "moderate",
+    "Description": "Ensures all page content is contained by landmarks",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  }
+]

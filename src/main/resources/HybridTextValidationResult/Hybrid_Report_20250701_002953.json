@@ -1,0 +1,623 @@
+{
+  "url": "https://soffront.com/",
+  "generated_at": "2025-07-01_00:29:53",
+  "dom_result": [
+    {
+      "baseline": "TestifyStack",
+      "actual": "TestifyStack",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "| Email, SMS, OTP and Webhooks Testing Stack for QA \u0026 Dev",
+      "actual": "| Email, SMS, OTP and Webhooks Testing Stack for QA \u0026 Dev",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Software testing courses",
+      "actual": "Software testing courses",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Practice",
+      "actual": "Practice",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Demos",
+      "actual": "Demos",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Tools",
+      "actual": "Tools",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Tips",
+      "actual": "Tips",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Test Cases",
+      "actual": "Test Cases",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "API Testing",
+      "actual": "API Testing",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "About",
+      "actual": "About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Free ISTQB",
+      "actual": "Free ISTQB",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Mock Exams",
+      "actual": "Mock Exams",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Do you enjoy this platform? ❤️",
+      "actual": "Do you enjoy this platform? ❤️",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Buy us a coffee",
+      "actual": "Buy us a coffee",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Home",
+      "actual": "Home",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Data Tables",
+      "actual": "Data Tables",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Data Tables page for Automation Testing Practice",
+      "actual": "Data Tables page for Automation Testing Practice",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Test automation products",
+      "actual": "Often times when you see a table it contains data which is sortable --",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Often times when you see a table it contains data which is sortable --",
+      "actual": "sometimes with actions that can be taken within each row (e.g. edit,",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "sometimes with actions that can be taken within each row (e.g. edit,",
+      "actual": "delete). And it can be challenging to automate interaction with sets of",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "delete). And it can be challenging to automate interaction with sets of",
+      "actual": "data in a table depending on how it is constructed.",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "data in a table depending on how it is constructed.",
+      "actual": "Example 1",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Example 1",
+      "actual": "No Class or ID attributes to signify groupings of rows and columns",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "No Class or ID attributes to signify groupings of rows and columns",
+      "actual": "Last Name",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Last Name",
+      "actual": "First Name",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Automation testing courses",
+      "actual": "Email",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "First Name",
+      "actual": "Due",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Email",
+      "actual": "Web Site",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Due",
+      "actual": "Action",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Web Site",
+      "actual": "Smith",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Action",
+      "actual": "Automation testing courses",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Smith",
+      "actual": "John",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "John",
+      "actual": "jsmith@gmail.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "jsmith@gmail.com",
+      "actual": "$50.00",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "$50.00",
+      "actual": "http://www.jsmith.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "http://www.jsmith.com",
+      "actual": "Edit",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Edit",
+      "actual": "Delete",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Bach",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Bach",
+      "actual": "Frank",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Frank",
+      "actual": "fbach@yahoo.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "fbach@yahoo.com",
+      "actual": "$51.00",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "$51.00",
+      "actual": "http://www.frank.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "http://www.frank.com",
+      "actual": "Doe",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Doe",
+      "actual": "Test automation products",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Jason",
+      "actual": "Jason",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "jdoe@hotmail.com",
+      "actual": "jdoe@hotmail.com",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "$100.00",
+      "actual": "$100.00",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "http://www.jdoe.com",
+      "actual": "http://www.jdoe.com",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Conway",
+      "actual": "Conway",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Tim",
+      "actual": "Tim",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "tconway@earthlink.net",
+      "actual": "tconway@earthlink.net",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "http://www.timconway.com",
+      "actual": "http://www.timconway.com",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Example 2",
+      "actual": "Example 2",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Class and ID attributes to signify groupings of rows and columns",
+      "actual": "Class and ID attributes to signify groupings of rows and columns",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Practice Test Automation WebSite for Web UI and Rest API",
+      "actual": "Practice Test Automation WebSite for Web UI and Rest API",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Version: bbea1eef | Copyright",
+      "actual": "Version: bbea1eef | Copyright",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Expand Testing",
+      "actual": "Expand Testing",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "2025",
+      "actual": "2025",
+      "result": "✅ PASS"
+    }
+  ],
+  "ocr_result": [
+    {
+      "baseline": "7 A",
+      "actual": "7 A",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Demos V Tools Tips Test Cases API Testing About",
+      "actual": "Demos V Tools Tips Test Cases API Testing About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "5",
+      "actual": "5",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "10 Years of Digital India",
+      "actual": "10 Years of Digital India",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "3 9 W\" e-llulnmmnlmegrm (2",
+      "actual": "3 9 W\" e-llulnmmnlmegrm (2",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": ", : lial-m llull- , 5 A:",
+      "actual": ", : lial-m llull- , 5 A:",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "IOVEIRSBF \u002773:: . 5 52:3,! animal\u0027sinh 10 Years of Digital India",
+      "actual": "IOVEIRSBF \u002773:: . 5 52:3,! animal\u0027sinh 10 Years of Digital India",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "ummLmnIA m m... p k ummhhm,",
+      "actual": "ummLmnIA m m... p k ummhhm,",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Government of India Open",
+      "actual": "Government of India Open",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Do you enjoy this platform? .",
+      "actual": "Do you enjoy this platform? .",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "n V",
+      "actual": "n V",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "A",
+      "actual": "A",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Demos V Tools Tips Test Cases API Testing About",
+      "actual": "Demos V Tools Tips Test Cases API Testing About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "3 x\" Home Data Tables",
+      "actual": "3 x\" Home Data Tables",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "PLACE-S Data Tables page for Automation Testing Practice",
+      "actual": "PLACE-S Data Tables page for Automation Testing Practice",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "\u0027 --:.:-.... l Often times when you see a table it contains data which is sortable -- sometimes with actions that can be taken",
+      "actual": "\u0027 --:.:-.... l Often times when you see a table it contains data which is sortable -- sometimes with actions that can be taken",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "1- - 5 within each row (e.g, edit, delete), And it can be challenging to automate interaction with sets of data in a table",
+      "actual": "1- - 5 within each row (e.g, edit, delete), And it can be challenging to automate interaction with sets of data in a table",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "L \u0027 l depending on how it is constructed.",
+      "actual": "L \u0027 l depending on how it is constructed.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Example 1",
+      "actual": "Example 1",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "No Class or ID attributes to signify groupings of rows and columns",
+      "actual": "No Class or ID attributes to signify groupings of rows and columns",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Last First",
+      "actual": "Last First",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Name Name Email Due Web Site Action",
+      "actual": "Name Name Email Due Web Site Action",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Kickstart Your Smith John jsmithgmail.com 50.00 http:www.jsmithcom Edit",
+      "actual": "Kickstart Your Smith John jsmithgmail.com 50.00 http:www.jsmithcom Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Trading",
+      "actual": "Trading",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Journey Now Delete",
+      "actual": "Journey Now Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Bach Frank fbachyahoo.com 51.00 http:www.frank.com Edit",
+      "actual": "Bach Frank fbachyahoo.com 51.00 http:www.frank.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "V",
+      "actual": "V",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "A",
+      "actual": "A",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Demos V Tools Tips Test Cases API Testing About",
+      "actual": "Demos V Tools Tips Test Cases API Testing About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "\" \u0027 \" \u0027 \"\" \u0027 \u0027 \u0027 tdlt",
+      "actual": "\" \u0027 \" \u0027 \"\" \u0027 \u0027 \u0027 tdlt",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Doe Jason jdoehotmail.com 100.00 http:www.jdoe.com Edit",
+      "actual": "Doe Jason jdoehotmail.com 100.00 http:www.jdoe.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Yvontage Dalete",
+      "actual": "Yvontage Dalete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Conway Tim tconwayearthlink.net 50.00 http:www.timconway.com Edit",
+      "actual": "Conway Tim tconwayearthlink.net 50.00 http:www.timconway.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Example 2",
+      "actual": "Example 2",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Class and ID attributes to signify groupings of rows and columns",
+      "actual": "Class and ID attributes to signify groupings of rows and columns",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Last First",
+      "actual": "Last First",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Name Name Email Due Web Site Action",
+      "actual": "Name Name Email Due Web Site Action",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Smith John jsmithgmail.com 50.00 http:www.jsmithcom Edit",
+      "actual": "Smith John jsmithgmail.com 50.00 http:www.jsmithcom Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "V",
+      "actual": "V",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "A",
+      "actual": "A",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Demos V Tools Tips Test Cases API Testing About",
+      "actual": "Demos V Tools Tips Test Cases API Testing About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Bach Frank fbachyahoo.com 51.00 http:www.frank.com Edit",
+      "actual": "Bach Frank fbachyahoo.com 51.00 http:www.frank.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Doe Jason jdoehotmail.com 100.00 http:www.jdoe.com Edit",
+      "actual": "Doe Jason jdoehotmail.com 100.00 http:www.jdoe.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Conway Tim tconwayearthlink.net 50.00 http:www.timconway.com Edit",
+      "actual": "Conway Tim tconwayearthlink.net 50.00 http:www.timconway.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Practice Test Automation WebSite for Web UI and Rest API",
+      "actual": "Practice Test Automation WebSite for Web UI and Rest API",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Version: bbea1eef Copyright Expand Testing 2025",
+      "actual": "Version: bbea1eef Copyright Expand Testing 2025",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "V",
+      "actual": "V",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "A",
+      "actual": "A",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Demos V Tools Tips Test Cases API Testing About",
+      "actual": "Demos V Tools Tips Test Cases API Testing About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Bach Frank fbachyahoo.com 51.00 http:www.frank.com Edit",
+      "actual": "Bach Frank fbachyahoo.com 51.00 http:www.frank.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Doe Jason jdoehotmail.com 100.00 http:www.jdoe.com Edit",
+      "actual": "Doe Jason jdoehotmail.com 100.00 http:www.jdoe.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Conway Tim tconwayearthlink.net 50.00 http:www.timconway.com Edit",
+      "actual": "Conway Tim tconwayearthlink.net 50.00 http:www.timconway.com Edit",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Delete",
+      "actual": "Delete",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Practice Test Automation WebSite for Web UI and Rest API",
+      "actual": "Practice Test Automation WebSite for Web UI and Rest API",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Version: bbea1eef Copyright Expand Testing 2025",
+      "actual": "Version: bbea1eef Copyright Expand Testing 2025",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "V",
+      "actual": "V",
+      "result": "✅ PASS"
+    }
+  ]
+}

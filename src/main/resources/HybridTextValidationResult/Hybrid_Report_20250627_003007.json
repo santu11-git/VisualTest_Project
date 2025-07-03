@@ -1,0 +1,673 @@
+{
+  "url": "https://soffront.com/",
+  "generated_at": "2025-06-27_00:30:07",
+  "dom_result": [
+    {
+      "baseline": "1-800-SOFFRONT",
+      "actual": "1-800-SOFFRONT",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "sales@soffront.com",
+      "actual": "sales@soffront.com",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Products",
+      "actual": "Products",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Case Studies",
+      "actual": "Case Studies",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Partners",
+      "actual": "Partners",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "About",
+      "actual": "About",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Blog",
+      "actual": "Blog",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Login",
+      "actual": "Login",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Request More Info",
+      "actual": "Request More Info",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "About Soffront",
+      "actual": "About Soffront",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Learn more about our story",
+      "actual": "Learn more about our story",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Our Story",
+      "actual": "Our Story",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Soffront was founded in October 1992. We launched first commercial software for Contact Management, Customer Ticketing, Asset and Defect Tracking Software, all in a single system, in February 1993 at a conference in San Jose, California. At the conference, we showcased our CRM software to track ALL customer communications, products sold and serviced, customer complaints and remedies, product defects and enhancements, and customer feedback.",
+      "actual": "Soffront was founded in October 1992. We launched first commercial software for Contact Management, Customer Ticketing, Asset and Defect Tracking Software, all in a single system, in February 1993 at a conference in San Jose, California. At the conference, we showcased our CRM software to track ALL customer communications, products sold and serviced, customer complaints and remedies, product defects and enhancements, and customer feedback.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "This was a brand-new concept of a software managing customer communications and tracking customer calls and reporting various matrix of open/close tickets and trends.",
+      "actual": "This was a brand-new concept of a software managing customer communications and tracking customer calls and reporting various matrix of open/close tickets and trends.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "At that time, most businesses used paper and pencil to record customer communications. Not to mention, there were no internet or the Web!",
+      "actual": "At that time, most businesses used paper and pencil to record customer communications. Not to mention, there were no internet or the Web!",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Our focus at that time was to educate businesses the importance of a CRM software to manage customer complaints, communication, customer assets, and maintain product catalog and product quality.",
+      "actual": "Our focus at that time was to educate businesses the importance of a CRM software to manage customer complaints, communication, customer assets, and maintain product catalog and product quality.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "During the next few years, Soffront grew rapidly. Many large corporations such as HP, Charles Schwab, signed up as our customers. During this time, we introduced two significant modules…Business Rules Engine to define IF-THEN-ELSE rules for an organization and a Knowledge Base module to store solutions for all the past customer issues and find them easily.",
+      "actual": "During the next few years, Soffront grew rapidly. Many large corporations such as HP, Charles Schwab, signed up as our customers. During this time, we introduced two significant modules…Business Rules Engine to define IF-THEN-ELSE rules for an organization and a Knowledge Base module to store solutions for all the past customer issues and find them easily.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "In the late 1990s, Soffront evolved, introducing our first Web version using Microsoft SQL Server or Oracle SQL server as backend. In addition, we introduced another groundbreaking concept… the email blast and email marketing.",
+      "actual": "In the late 1990s, Soffront evolved, introducing our first Web version using Microsoft SQL Server or Oracle SQL server as backend. In addition, we introduced another groundbreaking concept… the email blast and email marketing.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Our Growth continued. In 1999, we established our Indian Software Development Center in Kolkata, India and in the early 2000s we introduced a Hosted version as Software as a Service or SaaS. We used data centers to host our servers until Amazon introduced AWS.",
+      "actual": "Our Growth continued. In 1999, we established our Indian Software Development Center in Kolkata, India and in the early 2000s we introduced a Hosted version as Software as a Service or SaaS. We used data centers to host our servers until Amazon introduced AWS.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Today, Soffront is the only company to provide complete CRM and Marketing Software and Services. Marketing Services include both self-service and fully managed service, providing complete implementation services for our enterprise CRM customers. We maintain a team of highly qualified implementation engineers providing complete integration services to legacy systems. We also deploy enterprise CRM on the private cloud of enterprise customers.",
+      "actual": "Today, Soffront is the only company to provide complete CRM and Marketing Software and Services. Marketing Services include both self-service and fully managed service, providing complete implementation services for our enterprise CRM customers. We maintain a team of highly qualified implementation engineers providing complete integration services to legacy systems. We also deploy enterprise CRM on the private cloud of enterprise customers.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Our CRM and marketing platform is used by thousands of small to mid-sized businesses as well as",
+      "actual": "Our CRM and marketing platform is used by thousands of small to mid-sized businesses as well as",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "departments of many Fortune 500 companies and government organizations such as Siemens,",
+      "actual": "departments of many Fortune 500 companies and government organizations such as Siemens,",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "SAIC, Masshousing, Tangoe, General Electric, The American Red Cross, and the Minnesota Secretary of",
+      "actual": "SAIC, Masshousing, Tangoe, General Electric, The American Red Cross, and the Minnesota Secretary of",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "State.",
+      "actual": "State.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "At Soffront, we are always evolving. “We have an exciting roadmap ahead that includes deeper",
+      "actual": "At Soffront, we are always evolving. “We have an exciting roadmap ahead that includes deeper",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "automation between marketing, sales, and support, better engagement for customers, predictive",
+      "actual": "automation between marketing, sales, and support, better engagement for customers, predictive",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "analysis and scoring for marketing, support of multiple channels for marketing and service, and a better mobile experience” says Manu Das, President and CEO, Soffront.",
+      "actual": "analysis and scoring for marketing, support of multiple channels for marketing and service, and a better mobile experience” says Manu Das, President and CEO, Soffront.",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "We have Helped Thousands of Businesses Since 1992",
+      "actual": "We have Helped Thousands of Businesses Since 1992",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Our Awards",
+      "actual": "Our Awards",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Awards we have won over the years",
+      "actual": "Awards we have won over the years",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "MC Labs Innovation Award 2008",
+      "actual": "MC Labs Innovation Award 2008",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "CRM Excellence Award 2007",
+      "actual": "CRM Excellence Award 2007",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Customer Interaction Solutions Product of the Year Award 2006",
+      "actual": "Customer Interaction Solutions Product of the Year Award 2006",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Frost \u0026 Sullivan 2005 Entrepreneurial Company of the Year Award",
+      "actual": "Frost \u0026 Sullivan 2005 Entrepreneurial Company of the Year Award",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "2003 CRM Magazine Who’s Who",
+      "actual": "2003 CRM Magazine Who’s Who",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "10 Fastest Growing Digital Marketing Companies in 2016",
+      "actual": "10 Fastest Growing Digital Marketing Companies in 2016",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "20 Most Promising Digital Marketing Solution Providers in 2015",
+      "actual": "20 Most Promising Digital Marketing Solution Providers in 2015",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "2015 Communications Solutions Product of the Year Award",
+      "actual": "2015 Communications Solutions Product of the Year Award",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "2015/16 Top 15 CRM Small \u0026 Medium Business Software Award",
+      "actual": "2015/16 Top 15 CRM Small \u0026 Medium Business Software Award",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Top 10 CRM Companies to Work For In 2014",
+      "actual": "Top 10 CRM Companies to Work For In 2014",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "CRM Excellence Award 2013",
+      "actual": "CRM Excellence Award 2013",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "CRM Excellence Award 2011",
+      "actual": "CRM Excellence Award 2011",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Unified Communications Product of the Year Award 2008",
+      "actual": "Unified Communications Product of the Year Award 2008",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Over 25 Years of Quality Products \u0026 Services",
+      "actual": "Over 25 Years of Quality Products \u0026 Services",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Soffront CRM and marketing automation software has been honored with a number of industry awards since 1992",
+      "actual": "Soffront CRM and marketing automation software has been honored with a number of industry awards since 1992",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Our customers love Soffront. Over the years we have helped thousands of businesses succeed in their business",
+      "actual": "Our customers love Soffront. Over the years we have helped thousands of businesses succeed in their business",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "We guarantee your success with unlimited phone and email support and free online training by Soffront experts",
+      "actual": "We guarantee your success with unlimited phone and email support and free online training by Soffront experts",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "EMAIL",
+      "actual": "EMAIL",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "info@soffront.com",
+      "actual": "info@soffront.com",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "CALL",
+      "actual": "CALL",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "1-800-Soffront (763-3766)",
+      "actual": "1-800-Soffront (763-3766)",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "FIND",
+      "actual": "FIND",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "304 S. Jones Blvd, Suite 1681",
+      "actual": "304 S. Jones Blvd, Suite 1681",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Las Vegas, NV 89107",
+      "actual": "Las Vegas, NV 89107",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Copyright 1992-2020, Soffront Corporation |",
+      "actual": "Copyright 1992-2020, Soffront Corporation |",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Terms",
+      "actual": "Terms",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Privacy Policy",
+      "actual": "Privacy Policy",
+      "result": "✅ PASS"
+    }
+  ],
+  "ocr_result": [
+    {
+      "baseline": "A",
+      "actual": "A",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "k1-800-SOFFRONT Esalessoffront.com",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "SO FFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "SO FFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "( J (A Ji J l Jr,) Jr: H",
+      "actual": "( J (A Ji J l Jr,) Jr: H",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Jnline c: j m Ia :lfjj om JQIEWSJT:",
+      "actual": "Jnline c: j m Ia :lfjj om JQIEWSJT:",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Le ifl\u0027:j :fric: 17731f,ii Lliipgii\u00273ilalecl LLiytoiiiEJ\u0027;;il.l:i\u0027;i\u0027..llail",
+      "actual": "Le ifl\u0027:j :fric: 17731f,ii Lliipgii\u00273ilalecl LLiytoiiiEJ\u0027;;il.l:i\u0027;i\u0027..llail",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "Request More Info",
+      "actual": "Request More Info",
+      "result": "✅ PASS"
+    },
+    {
+      "baseline": "A",
+      "actual": "V",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "k1-800n-SOFFRONT Esalessoffront.com",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "CRM Trends, News, and Best Practices",
+      "actual": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Visit O ur Blog",
+      "actual": "CRM Trends, News, and Best Practices",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "We offer an awardeWinning software platform to generate more leads, close more sales, and support your customers",
+      "actual": "Visit Our Blog",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "30 years of trust Built to be customized",
+      "actual": "We offer an awardeWinning software platform to generate more leads, close more sales, and support your customers",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Over 30 years, we have seen what works and what Soffront\u0027s platform is built to be customized from the",
+      "actual": "30 years of trust Built to be customized",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "doesn\u0027t. We know why CRM initiatives fail. We are start. We pride ourselves to be the most customizable iv",
+      "actual": "Over 30 years, we have seen what works and what Soffront\u0027s platform is built to be customized from the",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "A",
+      "actual": "doesn\u0027t. We know why CRM initiatives fail. We are start. We pride ourselves to be the most customizable iv",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "k1-800-SOFFRONT Esalessoffront.com",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "committed towards working with you because we CRM 7 always has been due to our unique architecture. W,",
+      "actual": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "want you to succeed.",
+      "actual": "committed towards working with you because we CRM 7 always has been due to our unique architecture. W,",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Comprehensive customization tools",
+      "actual": "want you to succeed.",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "ln-house implementation We provide more comprehensive customization tools a",
+      "actual": "Comprehensive customization tools",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "We perform all implementations inrhouse With than other vendors ifyou have the time and resources",
+      "actual": "ln-house implementation We provide more comprehensive customization tools a",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "experienced Soffront experts. You wont waste your to customize the platform yourself.",
+      "actual": "We perform all implementations inrhouse With than other vendors ifyou have the time and resources",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "time and energy resolving conflicts between",
+      "actual": "experienced Soffront experts. You wont waste your to customize the platform yourself.",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "multi le vendors. .",
+      "actual": "time and energy resolving conflicts between",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "p FleXIble deployments",
+      "actual": "multi le vendors. .",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "We provide both cloud and onrpremise solutions eyou",
+      "actual": "p FleXIble deployments",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Tailored for all industries can even start with one and migrate to another.",
+      "actual": "We provide both cloud and onrpremise solutions eyou",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Our platform can be tailored for a variety of",
+      "actual": "Tailored for all industries can even start with one and migrate to another.",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "industries. .",
+      "actual": "Our platform can be tailored for a variety of",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "V",
+      "actual": "industries. .",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "A",
+      "actual": "V",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "k1-800-SOFFRONT Esalessoffront.com",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Latest From Our Blog ,",
+      "actual": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "A",
+      "actual": "Latest From Our Blog ,",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "k1-800-SOFFRONT Esalessoffront.com",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Follow Us for News, Tips and Best Practices",
+      "actual": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "DFFRONT How is on-premise CRM better",
+      "actual": "Follow Us for News, Tips and Best Practices",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "a 9 than On-Demand CRM?",
+      "actual": "DFFRONT How is on-premise CRM better",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": ". I SW EFFECTIVE IS Oct 10, 2022",
+      "actual": "a 9 than On-Demand CRM?",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "JSTOM CRM . l . ,",
+      "actual": ". I SW EFFECTIVE IS Oct 10, 2022",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "l. u, . )FTWARE FOR A 5:3 5, At first glance, itappears like every chOice",
+      "actual": "JSTOM CRM . l . ,",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "HITE . ; 3 i IDIUMSIZED 93555;? you make could end up costing you a",
+      "actual": "l. u, . )FTWARE FOR A 5:3 5, At first glance, itappears like every chOice",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "1 \u0027 .4\u0027 .",
+      "actual": "HITE . ; 3 i IDIUMSIZED 93555;? you make could end up costing you a",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "RM RESE ill DMFANY \" fortune. You try to weigh all the",
+      "actual": "1 \u0027 .4\u0027 .",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "advantages and disadvantages, negative",
+      "actual": "RM RESE ill DMFANY \" fortune. You try to weigh all the",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "and positive, as you stand at the",
+      "actual": "advantages and disadvantages, negative",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "A",
+      "actual": "and positive, as you stand at the",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": ", , , crossroads. Additionally, deciding between",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "What Paints Needed To Con5ider How Effective Is Custom CRM . d b (1 CRM",
+      "actual": ", , , crossroads. Additionally, deciding between",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "For Choosing White Label CRM Software For A Medium-Sized on\u0027prem\u0027ses or C O \u0027 age",
+      "actual": "What Paints Needed To Con5ider How Effective Is Custom CRM . d b (1 CRM",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Reseller Company",
+      "actual": "For Choosing White Label CRM Software For A Medium-Sized on\u0027prem\u0027ses or C O \u0027 age",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Jan 8, 2023 Dec 27, 2022",
+      "actual": "Reseller Company",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Has the thought of collaborating with a Custom CRM software is used to regulate",
+      "actual": "Jan 8, 2023 Dec 27, 2022",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "FDAl rncpllnr mmr rmumi um ll\u0027 mind? In rm mm HD nf Volatirmchinc hahliippn V",
+      "actual": "Has the thought of collaborating with a Custom CRM software is used to regulate",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "A",
+      "actual": "FDAl rncpllnr mmr rmumi um ll\u0027 mind? In rm mm HD nf Volatirmchinc hahliippn V",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "k1-800-SOFFRONT Esalessoffront.com",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "-... ..h... .. ..WsWJW. ......u .... WW. e. ...u..e......p. mes",
+      "actual": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "nearly all industries a business can companies and clients. They help in",
+      "actual": "-... ..h... .. ..WsWJW. ......u .... WW. e. ...u..e......p. mes",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "productively resell marketing automation collecting, storing, and analyzing",
+      "actual": "nearly all industries a business can companies and clients. They help in",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "tools. The same holds good for white-label information and making follow-up efforts",
+      "actual": "productively resell marketing automation collecting, storing, and analyzing",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "CRM solutions as well. The main function on the partners, and existing and potential",
+      "actual": "tools. The same holds good for white-label information and making follow-up efforts",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "ofa white-label CRM... clients ofa company. By means of...",
+      "actual": "CRM solutions as well. The main function on the partners, and existing and potential",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "A",
+      "actual": "ofa white-label CRM... clients ofa company. By means of...",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "k1-800-SOFFRONT Esalessoffront.com",
+      "actual": "A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "actual": "k1-800-SOFFRONT Esalessoffront.com",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "EMAIL CALL FIND",
+      "actual": "SOFFRONT Products v Case Studies Partners v About v Blog Login Request More Info",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "Las Vegas, NV 89107",
+      "actual": "EMAIL CALL FIND",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "V",
+      "actual": "infosoffront.com 1-800-Soffront(7633766) 304 S. Jones Blvd, Suite 1681 A",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "EMAIL CALL FIND",
+      "actual": "Las Vegas, NV 89107",
+      "result": "❌ FAIL"
+    },
+    {
+      "baseline": "",
+      "actual": "V",
+      "result": "❌ FAIL"
+    }
+  ]
+}

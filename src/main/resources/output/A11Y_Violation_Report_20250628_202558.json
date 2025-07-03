@@ -1,0 +1,76 @@
+{
+  "violations": [
+    {
+      "Violation ID": "violation_01",
+      "Rule": "color-contrast",
+      "Impact": "serious",
+      "WCAG Tags": "cat.color, wcag2aa, wcag143",
+      "Description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+      "Screenshot": "violation_01_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_02",
+      "Rule": "duplicate-id",
+      "Impact": "minor",
+      "WCAG Tags": "cat.parsing, wcag2a, wcag411",
+      "Description": "Ensures every id attribute value is unique",
+      "Screenshot": "violation_02_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_03",
+      "Rule": "heading-order",
+      "Impact": "moderate",
+      "WCAG Tags": "cat.semantics, best-practice",
+      "Description": "Ensures the order of headings is semantically correct",
+      "Screenshot": "violation_03_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_04",
+      "Rule": "label-title-only",
+      "Impact": "serious",
+      "WCAG Tags": "cat.forms, best-practice",
+      "Description": "Ensures that every form element is not solely labeled using the title or aria-describedby attributes",
+      "Screenshot": "violation_04_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/label-title-only?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_05",
+      "Rule": "landmark-one-main",
+      "Impact": "moderate",
+      "WCAG Tags": "cat.semantics, best-practice",
+      "Description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+      "Screenshot": "violation_05_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_06",
+      "Rule": "link-name",
+      "Impact": "serious",
+      "WCAG Tags": "cat.name-role-value, wcag2a, wcag412, wcag244, section508, section508.22.a",
+      "Description": "Ensures links have discernible text",
+      "Screenshot": "violation_06_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_07",
+      "Rule": "meta-viewport",
+      "Impact": "critical",
+      "WCAG Tags": "cat.sensory-and-visual-cues, wcag2aa, wcag144",
+      "Description": "Ensures \u003cmeta name\u003d\"viewport\"\u003e does not disable text scaling and zooming",
+      "Screenshot": "violation_07_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application\u003daxeAPI"
+    },
+    {
+      "Violation ID": "violation_08",
+      "Rule": "region",
+      "Impact": "moderate",
+      "WCAG Tags": "cat.keyboard, best-practice",
+      "Description": "Ensures all page content is contained by landmarks",
+      "Screenshot": "violation_08_20250628_164138.png",
+      "Help URL": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI"
+    }
+  ]
+}

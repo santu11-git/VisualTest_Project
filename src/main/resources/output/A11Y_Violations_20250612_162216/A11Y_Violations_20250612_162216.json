@@ -1,0 +1,74 @@
+[
+  {
+    "ViolationID": "aria-allowed-role",
+    "Impact": "minor",
+    "Description": "Ensures role attribute has an appropriate value for the element",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-allowed-role?application\u003daxeAPI",
+    "Selectors": [
+      "aside"
+    ]
+  },
+  {
+    "ViolationID": "aria-valid-attr-value",
+    "Impact": "critical",
+    "Description": "Ensures all ARIA attributes have valid values",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/aria-valid-attr-value?application\u003daxeAPI",
+    "Selectors": [
+      ".swatch-opt-1556 \u003e .size[attribute-code\u003d\"size\"][attribute-id\u003d\"\\31 43\"] \u003e .swatch-attribute-options.clearfix[aria-label\u003d\"Size\"] \u003e div[option-id\u003d\"\\31 66\"][option-label\u003d\"XS\"][aria-label\u003d\"XS\"]"
+    ]
+  },
+  {
+    "ViolationID": "color-contrast",
+    "Impact": "serious",
+    "Description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI",
+    "Selectors": [
+      ".content \u003e p"
+    ]
+  },
+  {
+    "ViolationID": "duplicate-id-active",
+    "Impact": "serious",
+    "Description": "Ensures every id attribute value of active elements is unique",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id-active?application\u003daxeAPI",
+    "Selectors": [
+      ".swatch-opt-1556 \u003e .size[attribute-code\u003d\"size\"][attribute-id\u003d\"\\31 43\"] \u003e .swatch-attribute-options.clearfix[aria-label\u003d\"Size\"] \u003e div[option-id\u003d\"\\31 66\"][option-label\u003d\"XS\"][aria-label\u003d\"XS\"]"
+    ]
+  },
+  {
+    "ViolationID": "duplicate-id",
+    "Impact": "minor",
+    "Description": "Ensures every id attribute value is unique",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application\u003daxeAPI",
+    "Selectors": [
+      "img:nth-child(6)"
+    ]
+  },
+  {
+    "ViolationID": "label",
+    "Impact": "critical",
+    "Description": "Ensures every form element has a label",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/label?application\u003daxeAPI",
+    "Selectors": [
+      "#search"
+    ]
+  },
+  {
+    "ViolationID": "link-name",
+    "Impact": "serious",
+    "Description": "Ensures links have discernible text",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI",
+    "Selectors": [
+      ".panel.header \u003e .header.links \u003e .greet.welcome[data-bind\u003d\"scope\\:\\ \\\u0027customer\\\u0027\"] \u003e .not-logged-in \u003e a"
+    ]
+  },
+  {
+    "ViolationID": "region",
+    "Impact": "moderate",
+    "Description": "Ensures all page content is contained by landmarks",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  }
+]

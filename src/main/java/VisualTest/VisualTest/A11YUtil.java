@@ -15,78 +15,79 @@ public class A11YUtil {
 
     private static final URL AXE_SCRIPT_URL = A11YUtil.class.getResource("/A11Y/axe.min.js");
 
-    public static void analyzePageAccessibility(WebDriver driver, String screenshotBasePath) {
-        try {
-            // Dynamic full page scroll to load lazy-loaded elements
-            fullyScrollPage(driver);
+    	public static void analyzePageAccessibility(WebDriver driver) {
+    	    try {
+    	        // 1️⃣ Ensure base path: src/main/resources/output/
+    	        String baseOutputDir = "src/main/resources/output";
+    	        File outputDir = new File(baseOutputDir);
+    	        if (!outputDir.exists()) outputDir.mkdirs(); // ✅ Create if missing
 
-            JSONObject responseJSON = new AXE.Builder(driver, AXE_SCRIPT_URL).analyze();
-            JSONArray violations = responseJSON.getJSONArray("violations");
+    	        // 2️⃣ Scroll for lazy-loaded content
+    	        fullyScrollPage(driver);
 
-            
+    	        // 3️⃣ Run AXE analysis
+    	        JSONObject responseJSON = new AXE.Builder(driver, AXE_SCRIPT_URL).analyze();
+    	        JSONArray violations = responseJSON.getJSONArray("violations");
 
-            if (violations.length() == 0) {
-                System.out.println("✅ No accessibility violations found.");
-                return;
-            }
+    	        if (violations.length() == 0) {
+    	            System.out.println("✅ No accessibility violations found.");
+    	            return;
+    	        }
 
-            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            File screenshotFolder = new File(screenshotBasePath + File.separator + "A11Y_Violations_" + timestamp);
-            screenshotFolder.mkdirs();
-            
-         // Save violations to JSON
-            A11YViolationJsonWriter.writeViolationsToJson(violations, screenshotBasePath, timestamp);
-            A11YExcelReportGenerator.writeViolationsToExcel(violations, screenshotBasePath, timestamp);
+    	        // 4️⃣ Prepare timestamped sub-folder
+    	        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+    	        File screenshotFolder = new File(baseOutputDir + File.separator + "A11Y_Violations_" + timestamp);
+    	        screenshotFolder.mkdirs();
 
-            for (int i = 0; i < violations.length(); i++) {
-                JSONObject violation = violations.getJSONObject(i);
-                String rule = violation.getString("id");
-                String impact = violation.optString("impact", "none");
-                String description = violation.getString("description");
-                String helpUrl = violation.getString("helpUrl");
-                JSONArray nodes = violation.getJSONArray("nodes");
+    	        // 5️⃣ Save JSON and Excel reports inside output/
+    	        A11YViolationJsonWriter.writeViolationsToJson(violations, baseOutputDir, timestamp);
+    	        A11YExcelReportGenerator.writeViolationsToExcel(violations, baseOutputDir, timestamp);
 
-                String label = "violation_" + String.format("%02d", i + 1);
-                System.out.println("========== " + label + " ==========");
-                System.out.println("Rule: " + rule);
-                System.out.println("Impact: " + impact);
-                System.out.println("Description: " + description);
-                System.out.println("Help URL: " + helpUrl);
+    	        // 6️⃣ Iterate and capture screenshots for each violation
+    	        for (int i = 0; i < violations.length(); i++) {
+    	            JSONObject violation = violations.getJSONObject(i);
+    	            String rule = violation.getString("id");
+    	            String impact = violation.optString("impact", "none");
+    	            String description = violation.getString("description");
+    	            String helpUrl = violation.getString("helpUrl");
+    	            JSONArray nodes = violation.getJSONArray("nodes");
 
-                if (nodes.length() > 0) {
-                    JSONObject node = nodes.getJSONObject(0);
-                    JSONArray targets = node.getJSONArray("target");
+    	            String label = "violation_" + String.format("%02d", i + 1);
+    	            System.out.println("========== " + label + " ==========");
+    	            System.out.println("Rule: " + rule);
+    	            System.out.println("Impact: " + impact);
+    	            System.out.println("Description: " + description);
+    	            System.out.println("Help URL: " + helpUrl);
 
-                    if (targets.length() > 0) {
-                        String cssSelector = targets.getString(0);
+    	            if (nodes.length() > 0) {
+    	                JSONObject node = nodes.getJSONObject(0);
+    	                JSONArray targets = node.getJSONArray("target");
 
-                        try {
-                            WebElement element = driver.findElement(By.cssSelector(cssSelector));
-                            scrollElementToCenter(driver, element);  // Center scroll
-                            highlightElement(driver, element);
+    	                if (targets.length() > 0) {
+    	                    String cssSelector = targets.getString(0);
 
-                           // STOP: Printing heavy HTML
-							/*
-							 * String html = element.getAttribute("outerHTML");
-							 * System.out.println("Violating HTML: " + html);
-							 */
+    	                    try {
+    	                        WebElement element = driver.findElement(By.cssSelector(cssSelector));
+    	                        scrollElementToCenter(driver, element);
+    	                        highlightElement(driver, element);
 
-                            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                            File dest = new File(screenshotFolder, label + "_" + timestamp + ".png");
-                            FileHandler.copy(src, dest);
-                            System.out.println("Screenshot saved to: " + dest.getAbsolutePath());
-                        } catch (Exception e) {
-                            System.out.println("⚠️ Could not locate or capture element: " + cssSelector);
-                        }
-                    }
-                }
-                System.out.println("======================================\n");
-            }
+    	                        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    	                        File dest = new File(screenshotFolder, label + "_" + timestamp + ".png");
+    	                        FileHandler.copy(src, dest);
+    	                        System.out.println("🖼️ Screenshot saved to: " + dest.getAbsolutePath());
 
-        } catch (Exception e) {
-            System.out.println("❌ Error during accessibility scan: " + e.getMessage());
-        }
-    }
+    	                    } catch (Exception e) {
+    	                        System.out.println("⚠️ Could not locate or capture element: " + cssSelector);
+    	                    }
+    	                }
+    	            }
+    	            System.out.println("======================================\n");
+    	        }
+
+    	    } catch (Exception e) {
+    	        System.out.println("❌ Error during accessibility scan: " + e.getMessage());
+    	    }
+    	}
 
     /**
      * Dynamically scrolls page fully to handle lazy loaded content.

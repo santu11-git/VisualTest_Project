@@ -1,0 +1,65 @@
+[
+  {
+    "ViolationID": "button-name",
+    "Impact": "critical",
+    "Description": "Ensures buttons have discernible text",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/button-name?application\u003daxeAPI",
+    "Selectors": [
+      ".btn-default"
+    ]
+  },
+  {
+    "ViolationID": "color-contrast",
+    "Impact": "serious",
+    "Description": "Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast?application\u003daxeAPI",
+    "Selectors": [
+      ".btn-link.btn.dropdown-toggle \u003e .hidden-xs.hidden-sm.hidden-md"
+    ]
+  },
+  {
+    "ViolationID": "heading-order",
+    "Impact": "moderate",
+    "Description": "Ensures the order of headings is semantically correct",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/heading-order?application\u003daxeAPI",
+    "Selectors": [
+      "h3"
+    ]
+  },
+  {
+    "ViolationID": "label",
+    "Impact": "critical",
+    "Description": "Ensures every form element has a label",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/label?application\u003daxeAPI",
+    "Selectors": [
+      ".form-control"
+    ]
+  },
+  {
+    "ViolationID": "landmark-one-main",
+    "Impact": "moderate",
+    "Description": "Ensures the page has only one main landmark and each iframe in the page has at most one main landmark",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/landmark-one-main?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  },
+  {
+    "ViolationID": "link-name",
+    "Impact": "serious",
+    "Description": "Ensures links have discernible text",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/link-name?application\u003daxeAPI",
+    "Selectors": [
+      ".list-inline \u003e li:nth-child(1) \u003e a"
+    ]
+  },
+  {
+    "ViolationID": "region",
+    "Impact": "moderate",
+    "Description": "Ensures all page content is contained by landmarks",
+    "HelpUrl": "https://dequeuniversity.com/rules/axe/3.1/region?application\u003daxeAPI",
+    "Selectors": [
+      "html"
+    ]
+  }
+]

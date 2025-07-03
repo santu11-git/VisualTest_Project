@@ -31,7 +31,6 @@ import VisualTest.VisualTest.ScreenshotCaptureSessionTracker;
 import VisualTest.VisualTest.VisionAIUtil;
 import VisualTest.VisualTest.VisualAnomalyDetector;
 import VisualTest.VisualTest.VisualComparisonBatchUtil;
-import VisualTest.VisualTest.VisualTesting10_ElementwiseSS;
 import dev.failsafe.internal.util.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
