@@ -11,7 +11,7 @@ import java.util.Map;
 public class AITCMistralGherkinClient {
 
    private static final String API_TOKEN = ""; // Replace with your Hugging Face token
-    private static final String MODEL = "mistralai/Mistral-7B-Instruct-v0.3";
+    private static final String MODEL = "";
     private static final String ENDPOINT = "https://api-inference.huggingface.co/models/" + MODEL;
 
     public static void callMistralToGenerateGherkin(List<AITCUIElementMeta> elementList) {

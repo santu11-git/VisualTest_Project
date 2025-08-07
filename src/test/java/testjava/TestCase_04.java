@@ -48,7 +48,7 @@ import org.testng.asserts.*;
 import org.testng.*;
 
 
-public class TestCase_04 {
+	public class TestCase_04 {
 	
 	// Take Baseline DOM Text and Save in Excel:
 	@Test
@@ -193,6 +193,7 @@ public class TestCase_04 {
 				public void MistralScoreAnalysis () throws Exception {
 				String latestJson = "src\\main\\resources\\HybridTextValidationResult\\Hybrid_Report_20250701_002953.json";
 				HuggingFaceScorerUtil.callMistralOnHuggingFace(latestJson);
+				
 				}
 				
 				

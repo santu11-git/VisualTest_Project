@@ -27,6 +27,7 @@ import VisualTest.VisualTest.ImageComparisonUpdatedUtil;
 import VisualTest.VisualTest.ImageComparisonUtil;
 import VisualTest.VisualTest.ImageMultipleComparisonUtil;
 import VisualTest.VisualTest.ResponsiveCDPUtil;
+import VisualTest.VisualTest.SingleImageZipUtil;
 import VisualTest.VisualTest.VisionAIUtil;
 import VisualTest.VisualTest.VisualAnomalyDetector;
 import VisualTest.VisualTest.VisualComparisonBatchUtil;
@@ -70,7 +71,7 @@ public class TestCase_01 {
 		Thread.sleep(5000);
 		driver.manage().window().maximize();
 		// For Single Page:
-		FullPageScreenshotBaselineUtil.captureFullPageScreenshotBaseline(driver, "baselineScreenshots");
+		FullPageScreenshotBaselineUtil.captureFullPageScreenshotBaseline(driver);
 		driver.quit();
 
 	}
@@ -85,7 +86,7 @@ public class TestCase_01 {
 		driver.manage().window().maximize();
 		// For Single Screenshots
 		
-		 ActualScreenshot.captureFullPageScreenshotActual(driver, "actualScreenshots"); 
+		 ActualScreenshot.captureFullPageScreenshotActual(driver); 
 		 driver.quit();
 	}
 	
@@ -113,7 +114,7 @@ public class TestCase_01 {
 	    
 	}
 	
-	// This is the final Baseline vs Actual comparison Test Case: New One
+	// This is the final Baseline vs Actual comparison Test Case: New One - Single Page
 	@Test
 	public void VisualTestRunnerUpdated () throws Exception {
 		
@@ -126,6 +127,8 @@ public class TestCase_01 {
             System.out.println("❌ Visual Test Failed: Differences found.");
             // Fail the test in TestNG if any difference found
          }  
+        
+        String zipFilePath= SingleImageZipUtil.createLatestVisualIQZip(); // Automatically zip latest folders on failure
 	}
 	
 	

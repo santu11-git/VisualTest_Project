@@ -13,8 +13,8 @@ public class A11YExcelReportGenerator {
 
     public static void writeViolationsToExcel(JSONArray violations, String folderPath, String timestamp) {
         try {
-            // ✅ Ensure output directory exists
-            File outputDir = new File("src/main/resources/output");
+            // ✅ Ensure output directory exists (from caller's folderPath)
+            File outputDir = new File(folderPath);
             if (!outputDir.exists()) outputDir.mkdirs();
 
             Workbook workbook = new XSSFWorkbook();
@@ -49,7 +49,7 @@ public class A11YExcelReportGenerator {
                     }
                 }
 
-                String screenshotPath = violationID + "_" + timestamp + ".png";
+                String screenshotPath = "violations/" + violationID + ".png";
                 String helpUrl = violation.optString("helpUrl", "");
 
                 row.createCell(0).setCellValue(violationID);
@@ -61,13 +61,13 @@ public class A11YExcelReportGenerator {
                 row.createCell(6).setCellValue(helpUrl);
             }
 
-            // Autosize
+            // Autosize columns
             for (int i = 0; i <= 6; i++) {
                 sheet.autoSizeColumn(i);
             }
 
-            // ✅ Final file path (ensure under correct folder)
-            String filePath = "src/main/resources/output/A11Y_Violation_Report_" + timestamp + ".xlsx";
+            // ✅ Save the file correctly inside the dynamic folder
+            String filePath = folderPath + File.separator + "A11Y_Violation_Report_" + timestamp + ".xlsx";
             try (FileOutputStream out = new FileOutputStream(filePath)) {
                 workbook.write(out);
                 workbook.close();

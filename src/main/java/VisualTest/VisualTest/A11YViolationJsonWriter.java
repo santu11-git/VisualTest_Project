@@ -14,9 +14,8 @@ public class A11YViolationJsonWriter {
 
     public static void writeViolationsToJson(JSONArray violations, String basePath, String timestamp) {
         try {
-            // ✅ Always point to: src/main/resources/output/
-            String outputDir = "src/main/resources/output";
-            File folder = new File(outputDir);
+            // ✅ Ensure output directory exists from caller
+            File folder = new File(basePath);
             if (!folder.exists()) folder.mkdirs();
 
             // ✅ Prepare JSON structure
@@ -31,7 +30,7 @@ public class A11YViolationJsonWriter {
             result.put("violations", violationList);
 
             // ✅ Generate JSON file path
-            String jsonFilePath = outputDir + File.separator + "A11Y_Violation_Report_" + timestamp + ".json";
+            String jsonFilePath = basePath + File.separator + "A11Y_Violation_Report_" + timestamp + ".json";
 
             // ✅ Write to file
             Gson gson = new GsonBuilder().setPrettyPrinting().create();

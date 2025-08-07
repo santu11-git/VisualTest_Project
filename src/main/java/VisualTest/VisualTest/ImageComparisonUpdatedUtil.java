@@ -16,31 +16,27 @@ import java.util.Date;
 
 public class ImageComparisonUpdatedUtil {
 
-    private static final String BASELINE_FOLDER = "src/main/resources/BaselineSS";
-    private static final String ACTUAL_FOLDER = "src/main/resources/ActualSS";
-    private static final String RESULT_FOLDER = "src/main/resources/ResultSS";
+    private static final String BASE_TEMP_DIR = System.getProperty("java.io.tmpdir") + File.separator + "VisualIQ";
+    private static final File BASELINE_PARENT_FOLDER = new File(BASE_TEMP_DIR + File.separator + "BaselineSS");
+    private static final File ACTUAL_PARENT_FOLDER = new File(BASE_TEMP_DIR + File.separator + "ActualSS");
+    private static final File RESULT_FOLDER = new File(BASE_TEMP_DIR + File.separator + "ResultSS");
 
     private static final double SSIM_THRESHOLD = 0.95;
     private static final int COLOR_TOLERANCE = 25;
-    private static final int PATCH_DIFF_THRESHOLD = 4; // How many pixels in a 5x5 patch need to differ
+    private static final int PATCH_DIFF_THRESHOLD = 4;
 
     public static boolean compareLatestBaselineAndActual() {
-        boolean preCheck = FailSafeUtility.validateScreenshotAvailability(BASELINE_FOLDER, ACTUAL_FOLDER);
-        if (!preCheck) {
-            System.out.println("❌ Pre-check failed. Comparison aborted.");
+        File latestBaselineImage = getLatestImageFromTimestampedFolder(BASELINE_PARENT_FOLDER);
+        File latestActualImage = getLatestImageFromTimestampedFolder(ACTUAL_PARENT_FOLDER);
+
+        if (latestBaselineImage == null || latestActualImage == null) {
+            System.out.println("❌ Could not locate latest baseline or actual image.");
             return false;
         }
 
         try {
-            File baselineFile = getLatestImageFile(new File(BASELINE_FOLDER));
-            File actualFile = getLatestImageFile(new File(ACTUAL_FOLDER));
-            if (baselineFile == null || actualFile == null) {
-                System.out.println("❌ Could not find latest screenshots.");
-                return false;
-            }
-
-            BufferedImage img1 = ImageIO.read(baselineFile);
-            BufferedImage img2 = ImageIO.read(actualFile);
+            BufferedImage img1 = ImageIO.read(latestBaselineImage);
+            BufferedImage img2 = ImageIO.read(latestActualImage);
 
             int width = Math.min(img1.getWidth(), img2.getWidth());
             int height = Math.min(img1.getHeight(), img2.getHeight());
@@ -69,9 +65,20 @@ public class ImageComparisonUpdatedUtil {
         }
     }
 
-    private static File getLatestImageFile(File folder) {
-        File[] imageFiles = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".png"));
+    // 🆕 This method locates the latest timestamped folder and fetches the latest image
+    private static File getLatestImageFromTimestampedFolder(File parentFolder) {
+        File[] timestampedFolders = parentFolder.listFiles(File::isDirectory);
+        if (timestampedFolders == null || timestampedFolders.length == 0) return null;
+
+        File latestFolder = Arrays.stream(timestampedFolders)
+                .max(Comparator.comparingLong(File::lastModified))
+                .orElse(null);
+
+        if (latestFolder == null) return null;
+
+        File[] imageFiles = latestFolder.listFiles((dir, name) -> name.toLowerCase().endsWith(".png"));
         if (imageFiles == null || imageFiles.length == 0) return null;
+
         return Arrays.stream(imageFiles)
                 .max(Comparator.comparingLong(File::lastModified))
                 .orElse(null);
@@ -140,7 +147,7 @@ public class ImageComparisonUpdatedUtil {
             }
 
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            File resultFolder = new File(RESULT_FOLDER + "/" + timestamp);
+            File resultFolder = new File(RESULT_FOLDER + File.separator + timestamp);
             resultFolder.mkdirs();
 
             File diffFile = new File(resultFolder, "DiffResult_" + timestamp + ".png");

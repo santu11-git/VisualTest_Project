@@ -20,55 +20,61 @@ import ru.yandex.qatools.ashot.Screenshot;
 //This is the final logic - Combination of Robot Class + AShot library: 
 public class ActualScreenshot {
 
-	 public static void captureFullPageScreenshotActual(WebDriver driver, String folderName) throws Exception {
-	      JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static String captureFullPageScreenshotActual(WebDriver driver) throws Exception {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
-	        // Get full page and viewport height
-	        Long scrollHeight = (Long) js.executeScript("return document.body.scrollHeight");
-	        Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
+        // Get full page and viewport height
+        Long scrollHeight = (Long) js.executeScript("return document.body.scrollHeight");
+        Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
 
-	        List<BufferedImage> capturedImages = new ArrayList<>();
-	        int yOffset = 0;
-	        int scrollBuffer = 50; // Overlap buffer to reduce stitching glitches
+        List<BufferedImage> capturedImages = new ArrayList<>();
+        int yOffset = 0;
+        int scrollBuffer = 50; // Overlap buffer to reduce stitching glitches
 
-	        // Capture screenshots by scrolling down in steps
-	        while (yOffset < scrollHeight) {
-	            js.executeScript("window.scrollTo(0, arguments[0]);", yOffset);
-	            Thread.sleep(800); // Allow page to render fully
+        // Capture screenshots by scrolling down in steps
+        while (yOffset < scrollHeight) {
+            js.executeScript("window.scrollTo(0, arguments[0]);", yOffset);
+            Thread.sleep(800); // Allow page to render fully
 
-	            Screenshot screenshot = new AShot().takeScreenshot(driver);
-	            BufferedImage image = screenshot.getImage();
-	            capturedImages.add(image);
+            Screenshot screenshot = new AShot().takeScreenshot(driver);
+            BufferedImage image = screenshot.getImage();
+            capturedImages.add(image);
 
-	            int actualCapturedHeight = image.getHeight();
-	            yOffset += (actualCapturedHeight - scrollBuffer);
-	        }
+            int actualCapturedHeight = image.getHeight();
+            yOffset += (actualCapturedHeight - scrollBuffer);
+        }
 
-	        // Stitch all captured images vertically
-	        int finalWidth = capturedImages.get(0).getWidth();
-	        int finalHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
+        // Stitch all captured images vertically
+        int finalWidth = capturedImages.get(0).getWidth();
+        int finalHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
 
-	        BufferedImage finalImage = new BufferedImage(finalWidth, finalHeight, BufferedImage.TYPE_INT_RGB);
-	        Graphics graphics = finalImage.getGraphics();
+        BufferedImage finalImage = new BufferedImage(finalWidth, finalHeight, BufferedImage.TYPE_INT_RGB);
+        Graphics graphics = finalImage.getGraphics();
 
-	        int currentHeight = 0;
-	        for (BufferedImage img : capturedImages) {
-	            graphics.drawImage(img, 0, currentHeight, null);
-	            currentHeight += img.getHeight();
-	        }
-	        graphics.dispose(); // Clean up
+        int currentHeight = 0;
+        for (BufferedImage img : capturedImages) {
+            graphics.drawImage(img, 0, currentHeight, null);
+            currentHeight += img.getHeight();
+        }
+        graphics.dispose(); // Clean up
 
-	        // Save stitched image with timestamp
-	        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-	        String folderPath = "src/main/resources/ActualSS";
-	        File folder = new File(folderPath);
-	        if (!folder.exists()) folder.mkdirs();
+        // Save stitched image to a machine-independent, timestamped folder
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String tempDir = System.getProperty("java.io.tmpdir");
+        String folderPath = tempDir + File.separator + "VisualIQ" + File.separator + "ActualSS" + File.separator + timestamp;
 
-	        File output = new File(folderPath + "/FullPageSS_" + timestamp + ".png");
-	        ImageIO.write(finalImage, "png", output);
+        File folder = new File(folderPath);
+        if (!folder.exists()) folder.mkdirs();
 
-	        System.out.println("✅ Full stitched screenshot saved at: " + output.getAbsolutePath());
-	    }
+        File output = new File(folderPath + File.separator + "FullPageSS.png");
+        ImageIO.write(finalImage, "png", output);
+
+        System.out.println("✅ Full stitched actual screenshot saved at: " + output.getAbsolutePath());
+
+        return folderPath; // Return for comparison logic chaining
+    }
+
+
 	    
 	 // For Multiple Screenshots:
 	    

@@ -21,10 +21,10 @@ import java.util.List;
 // This is the final logic - Combination of JS Class + AShot library: 
 public class FullPageScreenshotBaselineUtil {
 
-    public static void captureFullPageScreenshotBaseline(WebDriver driver, String folderName) throws Exception {
+    public static String captureFullPageScreenshotBaseline(WebDriver driver) throws Exception {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        // Get full page and viewport height
+        // Get full page height
         Long scrollHeight = (Long) js.executeScript("return document.body.scrollHeight");
         Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
 
@@ -32,10 +32,10 @@ public class FullPageScreenshotBaselineUtil {
         int yOffset = 0;
         int scrollBuffer = 50; // Overlap buffer to reduce stitching glitches
 
-        // Capture screenshots by scrolling down in steps
+        // Capture screenshots by scrolling
         while (yOffset < scrollHeight) {
             js.executeScript("window.scrollTo(0, arguments[0]);", yOffset);
-            Thread.sleep(800); // Allow page to render fully
+            Thread.sleep(800); // Let the page render
 
             Screenshot screenshot = new AShot().takeScreenshot(driver);
             BufferedImage image = screenshot.getImage();
@@ -45,7 +45,7 @@ public class FullPageScreenshotBaselineUtil {
             yOffset += (actualCapturedHeight - scrollBuffer);
         }
 
-        // Stitch all captured images vertically
+        // Stitch captured screenshots
         int finalWidth = capturedImages.get(0).getWidth();
         int finalHeight = capturedImages.stream().mapToInt(BufferedImage::getHeight).sum();
 
@@ -57,20 +57,24 @@ public class FullPageScreenshotBaselineUtil {
             graphics.drawImage(img, 0, currentHeight, null);
             currentHeight += img.getHeight();
         }
-        graphics.dispose(); // Clean up
+        graphics.dispose();
 
-        // Save stitched image with timestamp
+        // Save in machine-independent temp directory under a timestamped folder
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String folderPath = "src/main/resources/BaselineSS";
+        String tempDir = System.getProperty("java.io.tmpdir");
+        String folderPath = tempDir + File.separator + "VisualIQ" + File.separator + "BaselineSS" + File.separator + timestamp;
+
         File folder = new File(folderPath);
         if (!folder.exists()) folder.mkdirs();
 
-        File output = new File(folderPath + "/FullPageSS_" + timestamp + ".png");
+        File output = new File(folder, "FullPageSS.png");
         ImageIO.write(finalImage, "png", output);
 
-        System.out.println("✅ Full stitched screenshot saved at: " + output.getAbsolutePath());
-    }
+        System.out.println("✅ Baseline full page screenshot saved at: " + output.getAbsolutePath());
 
+        // Return folder path for tracking
+        return folderPath;
+    }
 
 
     // For Multiple Screenshots:

@@ -1,4 +1,3 @@
-// 1️⃣ A11YViolationToJsonExporter.java
 package VisualTest.VisualTest;
 
 import org.apache.poi.ss.usermodel.*;
@@ -14,10 +13,10 @@ import java.util.*;
 
 public class A11YViolationToJsonExporter {
 
-    public static String exportLatestA11YViolationToJson() {
+    public static String exportLatestA11YViolationToJson(String outputDir) {
         try {
-            File dir = new File("src/main/resources/output");
-            File[] files = dir.listFiles((d, name) -> name.startsWith("A11Y_Violation_Report_"));
+            File dir = new File(outputDir);
+            File[] files = dir.listFiles((d, name) -> name.startsWith("A11Y_Violation_Report_") && name.endsWith(".xlsx"));
             if (files == null || files.length == 0) return null;
 
             Arrays.sort(files, Comparator.comparingLong(File::lastModified).reversed());
@@ -49,12 +48,8 @@ public class A11YViolationToJsonExporter {
             Map<String, Object> result = new HashMap<>();
             result.put("violations", violations);
 
-            // ✅ Ensure the output folder exists
-            File outputDir = new File("src/main/resources/output");
-            if (!outputDir.exists()) outputDir.mkdirs();
-
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            String jsonPath = "src/main/resources/output/A11Y_Violation_Report_" + timestamp + ".json";
+            String jsonPath = outputDir + File.separator + "A11Y_Violation_Report_" + timestamp + ".json";
 
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             Files.write(Path.of(jsonPath), gson.toJson(result).getBytes());

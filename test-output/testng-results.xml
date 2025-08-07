@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T22:29:21 IST" name="Default suite" finished-at="2025-07-03T22:29:21 IST" duration-ms="789">
+  <suite started-at="2025-08-05T00:42:44 IST" name="Default suite" finished-at="2025-08-05T00:43:08 IST" duration-ms="24461">
     <groups>
     </groups>
-    <test started-at="2025-07-03T22:29:21 IST" name="Default test" finished-at="2025-07-03T22:29:21 IST" duration-ms="789">
-      <class name="testjava.TestCase_02">
-        <test-method signature="VisualTestRunnerMultipleImage1()[pri:0, instance:testjava.TestCase_02@71e9ddb4]" started-at="2025-07-03T22:29:21 IST" name="VisualTestRunnerMultipleImage1" finished-at="2025-07-03T22:29:21 IST" duration-ms="746" status="PASS">
+    <test started-at="2025-08-05T00:42:44 IST" name="Default test" finished-at="2025-08-05T00:43:08 IST" duration-ms="24461">
+      <class name="testjava.TestCase_05">
+        <test-method signature="testSEOAuditForBatchProcess()[pri:0, instance:testjava.TestCase_05@623a8092]" started-at="2025-08-05T00:42:44 IST" name="testSEOAuditForBatchProcess" finished-at="2025-08-05T00:43:08 IST" duration-ms="24433" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VisualTestRunnerMultipleImage1 -->
-      </class> <!-- testjava.TestCase_02 -->
+        </test-method> <!-- testSEOAuditForBatchProcess -->
+      </class> <!-- testjava.TestCase_05 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

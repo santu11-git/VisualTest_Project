@@ -10,88 +10,75 @@ import java.io.File;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 public class A11YUtil {
 
     private static final URL AXE_SCRIPT_URL = A11YUtil.class.getResource("/A11Y/axe.min.js");
 
-    	public static void analyzePageAccessibility(WebDriver driver) {
-    	    try {
-    	        // 1️⃣ Ensure base path: src/main/resources/output/
-    	        String baseOutputDir = "src/main/resources/output";
-    	        File outputDir = new File(baseOutputDir);
-    	        if (!outputDir.exists()) outputDir.mkdirs(); // ✅ Create if missing
+    public static String analyzePageAccessibility(WebDriver driver) {
+        String baseOutputDir = null;
+        try {
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            baseOutputDir = System.getProperty("java.io.tmpdir") + File.separator + "A11Y_Result_" + timestamp;
+            File outputDir = new File(baseOutputDir);
+            if (!outputDir.exists()) outputDir.mkdirs();
 
-    	        // 2️⃣ Scroll for lazy-loaded content
-    	        fullyScrollPage(driver);
+            fullyScrollPage(driver);
 
-    	        // 3️⃣ Run AXE analysis
-    	        JSONObject responseJSON = new AXE.Builder(driver, AXE_SCRIPT_URL).analyze();
-    	        JSONArray violations = responseJSON.getJSONArray("violations");
+            JSONObject responseJSON = new AXE.Builder(driver, AXE_SCRIPT_URL).analyze();
+            JSONArray violations = responseJSON.getJSONArray("violations");
 
-    	        if (violations.length() == 0) {
-    	            System.out.println("✅ No accessibility violations found.");
-    	            return;
-    	        }
+            if (violations.length() == 0) {
+                System.out.println("✅ No accessibility violations found.");
+                return baseOutputDir;
+            }
 
-    	        // 4️⃣ Prepare timestamped sub-folder
-    	        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-    	        File screenshotFolder = new File(baseOutputDir + File.separator + "A11Y_Violations_" + timestamp);
-    	        screenshotFolder.mkdirs();
+            File screenshotFolder = new File(baseOutputDir + File.separator + "violations");
+            screenshotFolder.mkdirs();
 
-    	        // 5️⃣ Save JSON and Excel reports inside output/
-    	        A11YViolationJsonWriter.writeViolationsToJson(violations, baseOutputDir, timestamp);
-    	        A11YExcelReportGenerator.writeViolationsToExcel(violations, baseOutputDir, timestamp);
+            A11YViolationJsonWriter.writeViolationsToJson(violations, baseOutputDir, timestamp);
+            A11YExcelReportGenerator.writeViolationsToExcel(violations, baseOutputDir, timestamp);
 
-    	        // 6️⃣ Iterate and capture screenshots for each violation
-    	        for (int i = 0; i < violations.length(); i++) {
-    	            JSONObject violation = violations.getJSONObject(i);
-    	            String rule = violation.getString("id");
-    	            String impact = violation.optString("impact", "none");
-    	            String description = violation.getString("description");
-    	            String helpUrl = violation.getString("helpUrl");
-    	            JSONArray nodes = violation.getJSONArray("nodes");
+            for (int i = 0; i < violations.length(); i++) {
+                JSONObject violation = violations.getJSONObject(i);
+                JSONArray nodes = violation.getJSONArray("nodes");
+                String label = "violation_" + String.format("%02d", i + 1);
 
-    	            String label = "violation_" + String.format("%02d", i + 1);
-    	            System.out.println("========== " + label + " ==========");
-    	            System.out.println("Rule: " + rule);
-    	            System.out.println("Impact: " + impact);
-    	            System.out.println("Description: " + description);
-    	            System.out.println("Help URL: " + helpUrl);
+                if (nodes.length() > 0) {
+                    JSONObject node = nodes.getJSONObject(0);
+                    JSONArray targets = node.getJSONArray("target");
 
-    	            if (nodes.length() > 0) {
-    	                JSONObject node = nodes.getJSONObject(0);
-    	                JSONArray targets = node.getJSONArray("target");
+                    if (targets.length() > 0) {
+                        String cssSelector = targets.getString(0);
 
-    	                if (targets.length() > 0) {
-    	                    String cssSelector = targets.getString(0);
+                        try {
+                            WebElement element = driver.findElement(By.cssSelector(cssSelector));
+                            scrollElementToCenter(driver, element);
+                            highlightElement(driver, element);
 
-    	                    try {
-    	                        WebElement element = driver.findElement(By.cssSelector(cssSelector));
-    	                        scrollElementToCenter(driver, element);
-    	                        highlightElement(driver, element);
+                            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                            File dest = new File(screenshotFolder, label + ".png");
+                            FileHandler.copy(src, dest);
+                            System.out.println("🖼️ Screenshot saved to: " + dest.getAbsolutePath());
 
-    	                        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-    	                        File dest = new File(screenshotFolder, label + "_" + timestamp + ".png");
-    	                        FileHandler.copy(src, dest);
-    	                        System.out.println("🖼️ Screenshot saved to: " + dest.getAbsolutePath());
+                        } catch (Exception e) {
+                            System.out.println("⚠️ Could not locate or capture element: " + cssSelector);
+                        }
+                    }
+                }
+                System.out.println("======================================\n");
+            }
 
-    	                    } catch (Exception e) {
-    	                        System.out.println("⚠️ Could not locate or capture element: " + cssSelector);
-    	                    }
-    	                }
-    	            }
-    	            System.out.println("======================================\n");
-    	        }
+            System.out.println("✅ Accessibility testing completed. Reports saved at: " + baseOutputDir);
+            return baseOutputDir;
 
-    	    } catch (Exception e) {
-    	        System.out.println("❌ Error during accessibility scan: " + e.getMessage());
-    	    }
-    	}
+        } catch (Exception e) {
+            System.out.println("❌ Error during accessibility scan: " + e.getMessage());
+            return baseOutputDir;
+        }
+    }
 
-    /**
-     * Dynamically scrolls page fully to handle lazy loaded content.
-     */
     private static void fullyScrollPage(WebDriver driver) {
         try {
             long lastHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
@@ -99,19 +86,16 @@ public class A11YUtil {
 
             while (sameHeightCount < 3) {
                 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-                Thread.sleep(1000); // wait for loading
-
+                Thread.sleep(1000);
                 long newHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
 
                 if (newHeight == lastHeight) {
                     sameHeightCount++;
                 } else {
-                    sameHeightCount = 0;  // reset counter if height changes
+                    sameHeightCount = 0;
                 }
                 lastHeight = newHeight;
             }
-
-            // Final return to top for cleaner screenshots
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
             Thread.sleep(1000);
         } catch (Exception e) {
@@ -119,9 +103,6 @@ public class A11YUtil {
         }
     }
 
-    /**
-     * Scrolls element to center of viewport.
-     */
     private static void scrollElementToCenter(WebDriver driver, WebElement element) {
         ((JavascriptExecutor) driver).executeScript(
                 "const viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);" +
@@ -130,11 +111,9 @@ public class A11YUtil {
         try { Thread.sleep(800); } catch (InterruptedException e) {}
     }
 
-    /**
-     * Highlights element with red border.
-     */
     private static void highlightElement(WebDriver driver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].style.border='3px solid red'", element);
     }
+
 }

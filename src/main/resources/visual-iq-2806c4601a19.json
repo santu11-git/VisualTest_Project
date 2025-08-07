@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "visual-iq",
+  "private_key_id": "2806c4601a199ebdf65c049841e3ec683814c3b4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCrIqoz4z0dwa2U\nH+JpfWLCxAz88TwaVcsoRkNMFFcTJcAvcqGhv95ExYamP+gAnOAKlGdFBwVma9bB\nk06+sb/WxlirskHYs8DBa+1JCIbcu3So4q1aC6LP4xOp0isP/x6b/LB7ee2X5tpy\n2gXd+cUVBi/sj4NhoQnrbB/1qE8+Ev89smBL+/0qnYKsDzm5KcWiJudUKK8hpPCC\nDeoOpU61r9LIfnTl9yPmld5GAvWISxuznJ/D2BDNYB6QQhveAMzmpSEfxKH5hx5K\ntA0oN5uFeYhSAz+STXsD2XKjLAtwaTICL+mu8HPlfoDYF2jtc5Z4EgUIvMfUfxgM\nzTUvJ813AgMBAAECggEAFpC8E5pviRhsLF9l6dX8K0VRlxqx+6D7aESXhBUchCxS\noo8BbAQSKUxIXGyJyWbmDc8SrOHnnuEyUJT9aZyjeIzvzTf0gb/19yslfx9ONRXM\npKY7CGgHYFUHVzmcrv/LR/MyTB3AK+rnPASuiF3yVDrcH9uujbV/ytiXgDtgs4Tz\ndmT9N5U1A1OrnwpnfnLbPju3wlDNKMeSBJ4jJ8LRZFyp1J9Ipur8h8vKug72PLR8\n6PdhlqD3C6uFz+ub5nBySMdscrvehKaUdh7PQkBszn4ChPAGzHq5+6ChhwNVabYf\nNo8ZJcrOA6chSRUslVmA6RMH7y5e2llSPoeBxZpcOQKBgQDc8Bu38EaU1K++0+Q+\npnvSFi05f4MAqxEL96Ya3u7j41dcn03onFNK1BPPOFT50tzJG41Gv7c3dYheMrGE\nSQjqvO3hBJSgWTVz2E36JMCoyv4SXc4fJ2NQsbj/O6U0tX2gJhTjltJVqrv6R24L\nJhILiQa2sK/fwufz5XPrhRtAWQKBgQDGS0Ow41EkAXqOksWTOosubDvcQFDLE/sJ\nUFoKaKMGBN5UM+kKio7YgEWjlIodMbqHOSY3WPxvckfWES4vVPgZWMDbWUGYiGTy\nse9qvqBvfpJ6iFBUaI8OazrqaqBoK5TB58S07SYT90Vg+uk3jDfl1Y3UzZ74EwHY\niqhNWWhCTwKBgQDSQgsO/LIe912dTIede9DAeWxmmMvyOdqKOg8w6VINPBCqy8xX\n/1VhE/0aKrDr41lMZlUHrHHPbKHvi2zWyK6cvlnf1/0dsGgnLAXhdVKIEE7E6dK8\nYT6pz8iP1ZJ+W+4HF9avVJws/MPSBmJaZ8uqgKgL+pAVcaZOvOGZlN3/WQKBgQCK\nHojC4EN3cfQ89Ozb9W5W4pr7em0MVxmHzkk5cNME8UUvn4zWg9al5Qscuu1NEoNb\nhyogaUJEGnUBHaxu2Z+KgDCtWMmBBphSGDCsyKUVpDNBWEujz8S9hWFfQPAEPz75\npYd1gq4AQD86Iutpfqi81XhaXvM41nx1qXc7kWg2rwKBgA/+gz/q28vNdHHmW81N\nLLMP0S07E2qwVhN/wNdythjhcTy7AjICUrD46AGyXgs8UJP6SuOzUFTsooWlg3J6\nneTNPH2yknGVJDkYMu2JD4pdMIgb7rwUmVUn0/0gPPCdiMJ6YrqPBlt+g45i02KA\nRIhgbhTCqijlP/nbRJAj8tNE\n-----END PRIVATE KEY-----\n",
+  "client_email": "visual-iq-service-account@visual-iq.iam.gserviceaccount.com",
+  "client_id": "112052252853818270285",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/visual-iq-service-account%40visual-iq.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
