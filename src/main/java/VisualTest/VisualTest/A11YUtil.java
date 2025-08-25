@@ -10,7 +10,6 @@ import java.io.File;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.UUID;
 
 public class A11YUtil {
 
@@ -26,6 +25,7 @@ public class A11YUtil {
 
             fullyScrollPage(driver);
 
+            // Run axe-core scan
             JSONObject responseJSON = new AXE.Builder(driver, AXE_SCRIPT_URL).analyze();
             JSONArray violations = responseJSON.getJSONArray("violations");
 
@@ -34,12 +34,11 @@ public class A11YUtil {
                 return baseOutputDir;
             }
 
+            // Folder for screenshots
             File screenshotFolder = new File(baseOutputDir + File.separator + "violations");
             screenshotFolder.mkdirs();
 
-            A11YViolationJsonWriter.writeViolationsToJson(violations, baseOutputDir, timestamp);
-            A11YExcelReportGenerator.writeViolationsToExcel(violations, baseOutputDir, timestamp);
-
+            // Capture screenshots and embed paths into JSON
             for (int i = 0; i < violations.length(); i++) {
                 JSONObject violation = violations.getJSONObject(i);
                 JSONArray nodes = violation.getJSONArray("nodes");
@@ -51,7 +50,6 @@ public class A11YUtil {
 
                     if (targets.length() > 0) {
                         String cssSelector = targets.getString(0);
-
                         try {
                             WebElement element = driver.findElement(By.cssSelector(cssSelector));
                             scrollElementToCenter(driver, element);
@@ -60,15 +58,32 @@ public class A11YUtil {
                             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
                             File dest = new File(screenshotFolder, label + ".png");
                             FileHandler.copy(src, dest);
-                            System.out.println("🖼️ Screenshot saved to: " + dest.getAbsolutePath());
 
+                            // Embed screenshot path into violation JSON
+                            violation.put("screenshotPath", "violations/" + label + ".png");
+
+                            System.out.println("🖼️ Screenshot saved to: " + dest.getAbsolutePath());
                         } catch (Exception e) {
                             System.out.println("⚠️ Could not locate or capture element: " + cssSelector);
+                            violation.put("screenshotPath", "N/A");
                         }
                     }
+                } else {
+                    violation.put("screenshotPath", "N/A");
                 }
                 System.out.println("======================================\n");
             }
+
+            // Write reports (JSON, Excel, HTML) with screenshot info
+            A11YViolationJsonWriter.writeViolationsToJson(violations, baseOutputDir, timestamp);
+            A11YExcelReportGenerator.writeViolationsToExcel(violations, baseOutputDir, timestamp);
+            A11YHtmlReportGenerator.writeViolationsToHtml(violations, baseOutputDir, timestamp, driver.getCurrentUrl());
+            
+            A11YViolationJsonWriter.writeViolationsToJson(violations, baseOutputDir, timestamp);
+
+         // generate developer-friendly JSON summary
+         String rawJsonPath = baseOutputDir + File.separator + "A11Y_Violation_Report_" + timestamp + ".json";
+         A11YDeveloperJsonReportGenerator.generateDeveloperSummary(rawJsonPath, baseOutputDir, timestamp);
 
             System.out.println("✅ Accessibility testing completed. Reports saved at: " + baseOutputDir);
             return baseOutputDir;

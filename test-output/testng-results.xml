@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-05T00:42:44 IST" name="Default suite" finished-at="2025-08-05T00:43:08 IST" duration-ms="24461">
+  <suite started-at="2025-08-25T15:54:54 IST" name="Default suite" finished-at="2025-08-25T15:54:56 IST" duration-ms="1505">
     <groups>
     </groups>
-    <test started-at="2025-08-05T00:42:44 IST" name="Default test" finished-at="2025-08-05T00:43:08 IST" duration-ms="24461">
-      <class name="testjava.TestCase_05">
-        <test-method signature="testSEOAuditForBatchProcess()[pri:0, instance:testjava.TestCase_05@623a8092]" started-at="2025-08-05T00:42:44 IST" name="testSEOAuditForBatchProcess" finished-at="2025-08-05T00:43:08 IST" duration-ms="24433" status="PASS">
+    <test started-at="2025-08-25T15:54:54 IST" name="Default test" finished-at="2025-08-25T15:54:56 IST" duration-ms="1505">
+      <class name="testjava.TestCase_01">
+        <test-method signature="GPTResponse()[pri:0, instance:testjava.TestCase_01@6a03bcb1]" started-at="2025-08-25T15:54:54 IST" name="GPTResponse" finished-at="2025-08-25T15:54:56 IST" duration-ms="1433" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSEOAuditForBatchProcess -->
-      </class> <!-- testjava.TestCase_05 -->
+        </test-method> <!-- GPTResponse -->
+      </class> <!-- testjava.TestCase_01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
