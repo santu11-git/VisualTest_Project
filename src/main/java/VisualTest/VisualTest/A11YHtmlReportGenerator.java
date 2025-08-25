@@ -88,14 +88,14 @@ public class A11YHtmlReportGenerator {
                     // Violations Table
                     writer.write("<h2>Violations Found: " + violations.length() + "</h2>");
                     writer.write("<table>");
-                    writer.write("<tr><th>#</th><th>Rule</th><th>Impact</th><th>Description</th><th>Help URL</th><th>Target</th><th>Screenshot</th></tr>");
+                  writer.write("<tr><th>#</th><th>Rule</th><th>Impact</th><th>Description</th><th>Target</th><th>Screenshot</th></tr>");
 
                     for (int i = 0; i < violations.length(); i++) {
                         JSONObject violation = violations.getJSONObject(i);
                         String rule = violation.optString("id", "N/A");
                         String impact = violation.optString("impact", "N/A");
                         String description = violation.optString("description", "N/A");
-                        String helpUrl = violation.optString("helpUrl", "#");
+                      //  String helpUrl = violation.optString("helpUrl", "#");
 
                         JSONArray nodes = violation.getJSONArray("nodes");
                         String target = nodes.length() > 0 ? nodes.getJSONObject(0).getJSONArray("target").toString() : "N/A";
@@ -108,7 +108,7 @@ public class A11YHtmlReportGenerator {
                         writer.write("<td>" + rule + "</td>");
                         writer.write("<td class='impact-" + (impact != null ? impact.toLowerCase() : "minor") + "'>" + impact + "</td>");
                         writer.write("<td>" + description + "</td>");
-                        writer.write("<td><a href='" + helpUrl + "' target='_blank'>Help Link</a></td>");
+                      //  writer.write("<td><a href='" + helpUrl + "' target='_blank'>Help Link</a></td>");
                         writer.write("<td>" + target + "</td>");
                         if (screenshotFile.exists()) {
                             writer.write("<td><a href='" + screenshotPath + "' target='_blank'>View Screenshot</a></td>");

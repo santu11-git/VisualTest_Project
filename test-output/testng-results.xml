@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-25T15:54:54 IST" name="Default suite" finished-at="2025-08-25T15:54:56 IST" duration-ms="1505">
+  <suite started-at="2025-08-25T16:46:10 IST" name="Default suite" finished-at="2025-08-25T16:46:37 IST" duration-ms="26338">
     <groups>
     </groups>
-    <test started-at="2025-08-25T15:54:54 IST" name="Default test" finished-at="2025-08-25T15:54:56 IST" duration-ms="1505">
-      <class name="testjava.TestCase_01">
-        <test-method signature="GPTResponse()[pri:0, instance:testjava.TestCase_01@6a03bcb1]" started-at="2025-08-25T15:54:54 IST" name="GPTResponse" finished-at="2025-08-25T15:54:56 IST" duration-ms="1433" status="PASS">
+    <test started-at="2025-08-25T16:46:10 IST" name="Default test" finished-at="2025-08-25T16:46:37 IST" duration-ms="26338">
+      <class name="testjava.TestCase_03">
+        <test-method signature="A11YTesting()[pri:0, instance:testjava.TestCase_03@3098cf3b]" started-at="2025-08-25T16:46:10 IST" name="A11YTesting" finished-at="2025-08-25T16:46:37 IST" duration-ms="26314" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GPTResponse -->
-      </class> <!-- testjava.TestCase_01 -->
+        </test-method> <!-- A11YTesting -->
+      </class> <!-- testjava.TestCase_03 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
