@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-02T11:44:47 IST" name="Default suite" finished-at="2025-12-02T11:44:49 IST" duration-ms="1500">
+  <suite started-at="2026-01-07T01:04:31 IST" name="Default suite" finished-at="2026-01-07T01:04:32 IST" duration-ms="821">
     <groups>
     </groups>
-    <test started-at="2025-12-02T11:44:47 IST" name="Default test" finished-at="2025-12-02T11:44:49 IST" duration-ms="1500">
+    <test started-at="2026-01-07T01:04:31 IST" name="Default test" finished-at="2026-01-07T01:04:32 IST" duration-ms="821">
       <class name="testjava.TestCase_08">
-        <test-method signature="comparePolicyTypeScreenshots()[pri:0, instance:testjava.TestCase_08@683dbc2c]" started-at="2025-12-02T11:44:47 IST" name="comparePolicyTypeScreenshots" finished-at="2025-12-02T11:44:49 IST" duration-ms="1415" status="PASS">
+        <test-method signature="comparePolicyTypeScreenshots()[pri:0, instance:testjava.TestCase_08@683dbc2c]" started-at="2026-01-07T01:04:31 IST" name="comparePolicyTypeScreenshots" finished-at="2026-01-07T01:04:32 IST" duration-ms="780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- comparePolicyTypeScreenshots -->
